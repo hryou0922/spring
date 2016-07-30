@@ -21,5 +21,13 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+  	<!-- sitemesh beigin  -->
+    <groupId>org.sitemesh</groupId>
+	    <artifactId>sitemesh</artifactId>
+	    <version>3.0.1</version>
+	</dependency>
+    <!-- sitemesh end  -->
+    
   </dependencies>
 </project>
