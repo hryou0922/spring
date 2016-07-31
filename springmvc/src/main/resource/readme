@@ -1,0 +1,7 @@
+
+study.hry.spring.springmvc.
+	-- simple
+		SimpleControl：第一个demo
+		LoginController：登陆
+	-- validation // 输入验证
+		
