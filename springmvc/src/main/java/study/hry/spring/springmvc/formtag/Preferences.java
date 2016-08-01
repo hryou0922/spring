@@ -28,4 +28,5 @@ public class Preferences {
     public void setFavouriteWord(String favouriteWord) {
         this.favouriteWord = favouriteWord;
     }
+    
 }

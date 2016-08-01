@@ -4,7 +4,9 @@ public class User {
 	private String firstName;
 	private String lastName;
 	private Preferences preferences;
-	
+	private String sex;
+    private String password;
+    
 	public String getFirstName() {
 		return firstName;
 	}
@@ -22,6 +24,18 @@ public class User {
 	}
 	public void setPreferences(Preferences preferences) {
 		this.preferences = preferences;
+	}
+	public String getSex() {
+		return sex;
+	}
+	public void setSex(String sex) {
+		this.sex = sex;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
 	}
 	
 }

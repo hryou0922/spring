@@ -1,14 +1,12 @@
 package study.hry.spring.springmvc.formtag;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
-import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-
-import study.hry.spring.springmvc.validation.validator.Employee;
 
 @Controller
 public class FormTagController {
@@ -18,6 +16,7 @@ public class FormTagController {
 		User user = new User();
 		user.setFirstName("firstName");
 		user.setLastName("lastName");
+		user.setSex("M");
 		
 		Preferences p = new Preferences();
 		p.setReceiveNewsletter(true);
@@ -30,6 +29,16 @@ public class FormTagController {
 		// model.addAttribute("command", user);
 		model.addAttribute("user",user);
 		
+		// interest2;
+		String[] interests2 = {"interests1","interests2"};  
+	    model.addAttribute("interestList", interests2); 
+		
+	    // sexOptions
+	    Map<String,String> sexOptions = new HashMap<String,String>();
+	    sexOptions.put("M", "男"); 
+	    sexOptions.put("F", "女"); 
+	    model.addAttribute("sexOptions", sexOptions);
+	    
 		return "formtag/form";
 	}
 }
