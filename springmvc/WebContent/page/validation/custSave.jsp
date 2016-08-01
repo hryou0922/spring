@@ -22,7 +22,7 @@
 			<tr>
 				<td>Name:</td>
 				<td><springForm:input path="name" /></td>
-				<td><springForm:errors path="name" cssClass="error" /></td>
+				<td><springForm:errors path="name" cssClass="error"  /></td>
 			</tr>
 			<tr>
 				<td>Email:</td>

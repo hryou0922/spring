@@ -15,7 +15,7 @@
 		If you have put the form backing object into the model under another name (definitely a best practice), 
 		then you can bind the form to the named variable
 	 -->
-	<form:form commandName="user">
+	<form:form commandName="user" action="save">
 		<table>
 			<!-- ===== The input tag begin =====  -->
 			<tr>
@@ -94,8 +94,54 @@
 			        <form:password path="password"/>
 			    </td>
 			</tr>
-			
 			<!-- ===== The Password tag end ===== -->
+			
+			<!-- ===== The select tag begin ===== -->
+			<tr>
+			    <td>Skills:</td>
+			    <td><form:select multiple="false" path="skills" items="${skills}"/></td>
+			</tr>
+			<!-- ===== The select tag end ===== -->
+			
+			<!-- ===== The select option tag begin ===== -->
+			<tr>
+			    <td>House:</td>
+			    <td>
+			        <form:select path="house">
+			            <form:option value="Gryffindor"/>
+			            <form:option value="Hufflepuff"/>
+			            <form:option value="Ravenclaw"/>
+			            <form:option value="Slytherin"/>
+			        </form:select>
+			    </td>
+			</tr>
+			<!-- ===== The select option tag end ===== -->
+			
+			<!-- ===== The select options tag begin ===== -->
+			<tr>
+			    <td>Country:</td>
+			    <td>
+			        <form:select path="country">
+			            <form:option value="-" label="--Please Select"/>
+			            <!-- countryList是对象List，对象包含两个属性code和name  -->
+			            <form:options items="${countryList}" itemValue="code" itemLabel="name"/>
+			        </form:select>
+			    </td>
+			</tr>
+			<!-- ===== The select options tag end ===== -->
+			
+			<!-- ===== The textarea tag begin ===== -->
+			<tr>
+			    <td>Notes:</td>
+			    <td><form:textarea path="notes" rows="3" cols="20"/></td>
+			    <td><form:errors path="notes"/></td>
+			</tr>
+			<!-- ===== The textarea tag end ===== -->
+			
+			<!-- ===== The hidden  tag begin ===== -->
+			<form:hidden path="house"/>
+			<!-- ===== The hidden  tag end ===== -->
+			
 
 			<tr>
 				<td colspan="2"><input type="submit" value="Save Changes" /></td>
