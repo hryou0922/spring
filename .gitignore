@@ -16,3 +16,4 @@ RemoteSystemsTempFiles
 .metadata
 */target
 Servers
+.recommenders
