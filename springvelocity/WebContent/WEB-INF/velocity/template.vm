@@ -1,0 +1,8 @@
+#set($page_title="测试首页")
+
+#define($script) 
+## custom script here
+<script src="script/jquery.js" type="text/javascript"></script>  
+#end
+
+ddd

@@ -1,1 +1,49 @@
-dddfasd
+<html>
+<header>
+
+</header>
+<body>
+	// ===== 显示普通内容 <br/>
+	Customer.name = ${customer.name} <br/>
+	Customer.value = ${customer.value} <br/>
+	
+	
+	<br />
+	// ==== 使用判断语句<br />
+	#if($customer.condition)
+		true
+	#else
+		false
+	#end
+	<br />
+	
+	<br />
+	// ===== foreach <br />
+	#foreach($ele in ${customer.list})
+		$velocityCount : $ele <br />
+	#end
+	
+	<br />
+	// ===== map <br />
+	#foreach($key in ${customer.map.keySet()})
+		$key : ${customer.map.get($key)} <br/>
+	#end
+	
+	<br />
+	// ==== 在模板中进行赋值  <br/>
+	#set($a="Hello World!")
+	$a <br/ >
+	#set($array1=[1..10])
+	#foreach($entry in $array1)
+		$entry <br/>
+	#end
+ 
+  	<br/>
+ 	// ===== 调用自定义dateUtil工具 <br/>
+ 	$!dateUtil.test("velocity")  
+ 
+ 	<br/>
+ 	#test() <br/>
+</body>
+
+</html>
