@@ -1,0 +1,2 @@
+#set ($innerVar = "This is an inner variable")
+Copyright © $companyName 2012

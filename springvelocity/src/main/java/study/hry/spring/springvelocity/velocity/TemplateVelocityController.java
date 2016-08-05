@@ -15,8 +15,14 @@ public class TemplateVelocityController {
 	}
 	
 	@RequestMapping(value = "/template", method = RequestMethod.GET)
-	public String saveCustomerPage(Model model) {
+	public String simpleTemplate(Model model) {
 		model.addAttribute("customer", new Customer());
 		return "template";
+	}
+	
+	@RequestMapping(value = "/fullLayout", method = RequestMethod.GET)
+	public String fullLayout(Model model) {
+		model.addAttribute("customer", new Customer());
+		return "template/fullIndex";
 	}
 } 
