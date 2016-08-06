@@ -54,4 +54,13 @@
 		<property name="defaultEncoding" value="UTF-8" />
 	</bean>
 	
+	<!--  
+	<interceptors>
+		<bean
+			class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
+			<property name="paramName" value="locale" />
+		</bean>
+	</interceptors>
+	-->
+	
 </beans>
