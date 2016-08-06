@@ -1,0 +1,14 @@
+
+
+study.hry.spring.springvelocity.velocity
+	FirstVelocityController:第一个velocity的demo
+	TemplateVelocityController：完整的velocity的demo
+		自定义宏
+		#parse：加载外部vm
+		#define($script)：定义属性
+		实用模板：
+			实用默认模板
+			不实用默认模板，自定义模板
+		NewsTool：定义新的工具类
+		
+		

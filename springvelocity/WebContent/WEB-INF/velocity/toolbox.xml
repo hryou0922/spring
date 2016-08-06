@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>  
 <toolbox>  
+    <!-- 引用第三方的库 -->
     <tool>  
         <key>dateUtil</key>  
         <scope>application</scope>  
         <class>study.hry.spring.springvelocity.support.DateUtil</class>  
     </tool>  
+    
+    <!-- 引用自定义的tool -->
+    <tool>
+        <key>newstool</key>
+        <scope>application</scope>  
+        <class>study.hry.spring.springvelocity.support.NewsTool</class>
+    </tool>
 </toolbox> 

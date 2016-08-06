@@ -14,12 +14,23 @@ public class TemplateVelocityController {
 		System.out.println("TemplateVelocityController init");
 	}
 	
+	/**
+	 * http://localhost:8080/springvelocity/mvc/template
+	 * 
+	 * @param model
+	 * @return
+	 */
 	@RequestMapping(value = "/template", method = RequestMethod.GET)
 	public String simpleTemplate(Model model) {
 		model.addAttribute("customer", new Customer());
 		return "template";
 	}
 	
+	/**
+	 * http://localhost:8080/springvelocity/mvc/fullLayout
+	 * @param model
+	 * @return
+	 */
 	@RequestMapping(value = "/fullLayout", method = RequestMethod.GET)
 	public String fullLayout(Model model) {
 		model.addAttribute("customer", new Customer());
