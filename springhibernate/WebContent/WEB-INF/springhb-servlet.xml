@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+       http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+       ">
+    
+    <import resource="spring-hibernate.xml" />
+     
+    <!-- 通过component-scan 让Spring扫描类，让Spring的代码注解生效 -->
+    <context:component-scan base-package="study.hry.spring.springhibernate">
+    </context:component-scan>
+    
+    <!-- mvc 一些的配置 -->
+	<mvc:annotation-driven>
+	</mvc:annotation-driven>
+	
+	<!-- 基于注释的事务，当注释中发现@Transactional时，使用id为“transactionManager”的事务管理器  -->
+    <!-- 如果没有设置transaction-manager的值，则spring以缺省默认的事务管理器来处理事务，默认事务管理器为第一个加载的事务管理器 -->
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+    
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+      <!--     <property name="prefix" value="/WEB-INF/jsp/"/>-->
+    	<property name="prefix" value="/page/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+    
+	<!-- 加载消息文件 -->
+	<bean id="messageSource"
+		class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+		<property name="basename" value="classpath:message" />
+		<property name="defaultEncoding" value="UTF-8" />
+	</bean>
+  	
+</beans>
