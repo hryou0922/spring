@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD
+3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="study.hry.spring.springhibernate.simple2.House" table="house">
+		<!-- 
+		<id name="id" column="id">
+			<generator class="sequence">
+				<param name="sequence">SEQ_HOUSE_ID</param>
+			</generator>
+		</id>  -->
+		<id name="id" type="int">
+            <column name="ID" />
+            <!-- 指定主键生成策略 -->
+            <generator class="assigned" />
+        </id>
+		<property name="name" column="name" />
+		<property name="address" column="address" />
+	</class>
+</hibernate-mapping>

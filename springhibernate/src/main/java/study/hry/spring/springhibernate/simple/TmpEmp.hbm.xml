@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2013-4-29 17:07:22 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="study.hry.spring.springhibernate.simple.TmpEmp" table="TMP_EMP">
+        <id name="id" type="int">
+            <column name="ID" />
+            <!-- 指定主键生成策略 -->
+            <generator class="assigned" />
+        </id>
+        <property name="name" type="java.lang.String">
+            <column name="NAME" />
+        </property>
+        <property name="birthday" type="java.util.Date">
+            <column name="BIRTHDAY" />
+        </property>
+        <property name="sex" type="java.lang.Character">
+            <column name="SEX" />
+        </property>
+        <property name="salary" type="java.lang.Float">
+            <column name="SALARY" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -19,7 +19,9 @@
 	
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	 	<!-- 
 		<hibernate.version>3.6.10.Final</hibernate.version>
+	  	-->
 		<mysql.version>5.1.39</mysql.version>
 		<spring.version>4.1.6.RELEASE</spring.version>
 	</properties>
@@ -122,6 +124,11 @@
 	    <groupId>org.hibernate</groupId>
 	    <artifactId>hibernate-core</artifactId>
 	</dependency>
+	<dependency>
+	    <groupId>org.hibernate</groupId>
+	    <artifactId>hibernate-annotations</artifactId>
+	</dependency>
+	
 	<!-- hibernate begin -->
 	
 	<!-- Mysql -->
@@ -129,7 +136,12 @@
         <groupId>mysql</groupId>
         <artifactId>mysql-connector-java</artifactId>
     </dependency>
-		
+	
+	<dependency>
+	    <groupId>org.javassist</groupId>
+	    <artifactId>javassist</artifactId>
+	</dependency>
+	
 		
 	</dependencies>
 </project>
