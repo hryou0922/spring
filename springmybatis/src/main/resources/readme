@@ -1,0 +1,25 @@
+
+
+
+simple
+	最简单mybatis访问方式
+
+multipleData
+	多数据源
+
+transaction
+	事物
+
+interceptor
+	拦截器
+
+page
+	分页
+	
+cache
+	缓存
+	
+	
+	
+	
+	

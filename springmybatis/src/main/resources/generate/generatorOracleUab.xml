@@ -1,0 +1,93 @@
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+	
+	<!-- 数据库驱动包位置 -->
+	<!-- SQL Server数据驱动包 --> 
+	<classPathEntry location="D:/mvnrepository/com/oracle/ojdbc14/10.2.0.5.0/ojdbc14-10.2.0.5.0.jar" />
+	
+	<!-- 此处指定生成针对MyBatis3的DAO -->
+	<!-- id: 必须配置。这个上下文的惟一标识符。该值将被用在一些错误消息。 defaultModelType:用来定义生成模型类型策略。 1.conditional 
+		默认策略，为每个表生成一个Model class 2.flat:将所有的表中生成一个Model class，即这个类将保存所有表中字段 3.hierarchical 
+		：如果表有一个主键，该模型将生成一个主键类,另一个类,用于容纳任何BLOB列在表中,和另一个类,用于容纳其余的字段。这个是一个适当的继承类之间的关系。 
+		targetRuntime：此属性用于指定运行时目标生成的代码。 1.MyBatis3 默认值 将生成对象兼容MyBatis版本3.0和更高版本,和JSE 
+		5.0和更高版本 (例如Java模型和mapper接口将使用泛型类型)。 “by example”方法在这些生成的对象支持几乎无限的动态where子句。 
+		此外,Java对象与这些生成器生成支持许多JSE 5.0特性包括参数化的类型和注释。 2.Ibatis2Java2 3.Ibatis2Java5 -->
+	<context id="MySQLTables" targetRuntime="MyBatis3"
+		defaultModelType="conditional">
+		<!-- <plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin" 
+			/> -->
+		<!-- 用来生成注释 1. suppressAllComments 默认是false 此属性用于指定在生成的代码是否将包括任何注释。如果设置为true 
+			则不生成注释 2. suppressDate 默认是false 此属性用于指定在生成的注释是否将包括MBG代时间戳。 -->
+		<commentGenerator>
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+
+		<!-- 数据库链接URL、用户名、密码 -->
+		<jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver" connectionURL="jdbc:oracle:thin:@192.168.21.146:1521:orcl" 
+			userId="uab" password="ecpyfss"> </jdbcConnection>
+			
+
+
+		<!-- java类型解析器 可选配置 -->
+		<!-- <javaTypeResolver type=""> type属性： 这可用于指定一个用户提供的Java类型解析器。这个类必须实现接口org.mybatis.generator.api。 
+			JavaTypeResolver,必须有一个公共的默认构造函数。属性还可以接受特殊的值默认在这种情况下,将使用默认的实现(这同样的效果不指定类型)。 
+			该标签支持的属性： forceBigDecimals：默认是false 是否强制使用BigDecimal来表示所有的十进制和数值字段。 •如果规模很大，长度大于18,将使用BigDecimal类型。 
+			•如果其长度为10到18,则Java类型解析器将java.lang.Long来代替了。 •如果长度为5到9,然后Java类型解析器将替换为一个Java.lang.integer。 
+			•如果其长度小于5,则Java类型解析器将以java.lang.Short替代。 -->
+
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+
+		<!-- 生成vo对象 -->
+		<!-- < javaModelGenerator >元素用于定义Java模型生成的属性。 Java模型生成器建立主键类,记录类,和查询示例类相匹配的表进行自省。这个元素是所需的子元素<上下文>元素。 
+			支持的属性： constructorBased： 此属性用于选择是否MyBatis生成器将生成一个类的构造函数,它接受一个值类中的每个字段。同时,SQL结果地图将建成投入使用构造函数而不是“setter”每个字段。 
+			这个属性是只适用于MyBatis3和将被忽略了iBATIS2。 默认值是false。 immutable: 不可变，此属性用于选择是否MyBatis生成器将产生不可变模型类——这意味着类不会有“setter”方法和构造函数会接受类中每个字段的值。默认为false。 
+			trimStrings: 此属性用于选择MyBatis生成器是否添加代码来修剪的字符字段从数据库返回的空白空间。 这很有用,如果您的数据库将数据存储在字符字段而不是VARCHAR字段。MyBatis生成器将插入代码来削减字符字段。 
+			默认值是false。 -->
+		<!-- 生成实体类的包名和位置，这里配置将生成的实体类放在com.ouc.model这个包下 -->
+		<javaModelGenerator targetPackage="cn.com.pubinfo.ecp.cw.model"
+			targetProject="d:\tmp\src">
+			<property name="enableSubPackages" value="true" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+
+		<!-- 生成用于查询的mapping对象 -->
+		<!-- 生成的SQL映射文件包名和位置，这里配置将生成的SQL映射文件放在com.ouc.mapping这个包下 -->
+		<sqlMapGenerator targetPackage="cn.com.pubinfo.ecp.cw.mapper"
+			targetProject="d:\tmp\src">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+
+		<!-- 生成DAO的类文件以及配置文件 -->
+		<!-- < javaClientGenerator >元素是用来定义Java客户机代码生成器的属性。 Java客户机生成器用来建立Java接口和类,以便可以方便地使用生成的Java模型和XML映射文件。 
+			对于iBATIS2目标环境,这些生成的对象采用形式的DAO接口和实现类。 对于MyBatis,生成的对象采用mapper形式的接口。 这个元素是一个可选的子元素。 
+			如果你不指定这个元素,MyBatis生成器(MBG)不会生成Java客户端接口和类。 其中的type属性： 如果targetRuntime 为MyBatis3 
+			XMLMAPPER：生成的对象将Java接口MyBatis 3.x mapper基础设施。接口将会依赖生成的XML映射器文件。一般都是使用这个XMLMAPPER. -->
+		<!-- 生成DAO的包名和位置，这里配置将生成的dao类放在com.ouc.dao这个包下 -->
+		<javaClientGenerator type="XMLMAPPER"
+			targetPackage="cn.com.pubinfo.ecp.cw.mapper" 
+			targetProject="d:\tmp\src">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+
+		<!-- <table>元素用于选择数据库中的一个表。选择的表将导致为每个表生成以下对象: •一个MyBatis / iBATIS•格式化的SQL的映射文件 
+			•一组类,形成了“模型”表包括: •一个类来匹配•表的主键(如果表有一个主键)。 •表中字段匹配的,不是在主键,而非BLOB字段。这个类将扩展主键,如果有一个。 
+			•一个类来持有任何表中的BLOB字段(如果有的话)。这个类将扩展其中一个的前面两个类取决于表的配置。 •一个类,用于生成动态where子句,在不同的“by 
+			Example”方法(selectByExample,deleteByExample)。 •(可选)DAO接口和类 tableName:必须配置 
+			指定表的名称 domainObjectName：生成javabean对象的基本名称。如果未指定,MBG将自动基于表名生成。 这个名字(无论是在这里指定,或自动生成)将被用来作为域类名和DAO类的名字。 
+			enableInsert：是否生成插入语句。默认是true enableSelectByPrimaryKey：是否通过主键生成选择语句。不管是否有这种设置,如果该表没有一个主键将不会生成。 
+			enableUpdateByPrimaryKey：是否通过主键生成更新语句。如果该表没有主键，不管是否设置该属性,语句将不会生成。 enableDeleteByPrimaryKey：是否通过主键生成删除语句。如果该表没有主键，不管这种设置该属性,语句将不会生成。 
+			enableDeleteByExample：是否通过example对象生成删除语句。这个声明使得许多不同的动态删除在运行时生成。 enableCountByExample：是否通过example对象生成计算行数语句。该语句将返回一个表中的行数相匹配的example。 
+			enableUpdateByExample：是否通过example对象生成更新语句。该语句将更新一个表中相匹配的记录。 selectByPrimaryKeyQueryId：这个值将被添加到选择列表中选择通过主键的声明在本表格:“' 
+			<值>作为QUERYID”。这可以用于识别查询在DBA在运行时跟踪工具。如果你需使用,你应该指定一个唯一的id为每个不同的查询生成MBG。 selectByExampleQueryId：这个值将被添加到选择列表中选择通过例子的声明在本表格:“' 
+			<值>作为QUERYID”。这可以用于识别查询在DBA在运行时跟踪工具。如果你需使用,你应该指定一个唯一的id为每个不同的查询生成MBG。 enableSelectByExample:是否应该生成通过example的选择语句。这个声明使得许多不同的动态查询是在运行时生成。 
+			modelType：此属性用于覆盖默认的模型类型,如果你想对这张表这么做。如果未指定,MBG将生成的域对象基于上下文默认的模型类型。 该模型类型定义了如何将生成MBG域类。 
+			一些模型类型MBG将生成一个单一的域类为每个表,和其他可能产生不同的类MBG取决于表的结构。 escapeWildcards：排除通配符。这意味着无论SQL通配符(' 
+			_ '和' % ')的模式和表名都应该避免在搜寻列。 这是一些驱动要求如果模式或表包含一个SQL通配符(例如,如果一个表的名字是MY_TABLE,一些驱动要求的下划线字符进行转义)。 -->
+		<!-- 要生成那些表(更改tableName和domainObjectName就可以) -->
+		<table schema="uab"  tableName="tm_eab_contact" domainObjectName="EabContact" enableInsert="true" enableUpdateByPrimaryKey="true" enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true" />
+			
+	</context>
+</generatorConfiguration>
