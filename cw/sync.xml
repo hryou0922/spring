@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="GB2312"?>
+
+<syncs>
+    <sync excludes="" src="target/classes" configPropPath="" includes="" type="common" target="D:/DEV_TOOLS/apache-tomcat-7.0.65/webapps/cw_n/WEB-INF/classes"/>
+    <sync excludes="" src="src/main/webapp" configPropPath="" includes="" type="common" target="D:/DEV_TOOLS/apache-tomcat-7.0.65/webapps/cw_n"/>
+</syncs>

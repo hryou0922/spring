@@ -1,0 +1,672 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.com.pubinfo.ecp.cw.mapper.uab.EabContactMapper">
+  <resultMap id="BaseResultMap" type="cn.com.pubinfo.ecp.cw.model.uab.EabContact">
+    <id column="CONTACTID" jdbcType="VARCHAR" property="contactid" />
+    <result column="NAME" jdbcType="VARCHAR" property="name" />
+    <result column="ENGLISHNAME" jdbcType="VARCHAR" property="englishname" />
+    <result column="PHS" jdbcType="VARCHAR" property="phs" />
+    <result column="ALIAS" jdbcType="VARCHAR" property="alias" />
+    <result column="BIRTHDAY" jdbcType="VARCHAR" property="birthday" />
+    <result column="FIRSTNAME" jdbcType="VARCHAR" property="firstname" />
+    <result column="LASTNAME" jdbcType="VARCHAR" property="lastname" />
+    <result column="IDENTITY" jdbcType="VARCHAR" property="identity" />
+    <result column="EMPLOYEENUMBER" jdbcType="VARCHAR" property="employeenumber" />
+    <result column="SEX" jdbcType="VARCHAR" property="sex" />
+    <result column="COMPANY" jdbcType="VARCHAR" property="company" />
+    <result column="DEPARTMENT" jdbcType="VARCHAR" property="department" />
+    <result column="POSITION" jdbcType="VARCHAR" property="position" />
+    <result column="MANAGER" jdbcType="VARCHAR" property="manager" />
+    <result column="ASSISTANT" jdbcType="VARCHAR" property="assistant" />
+    <result column="OFFICEADDR" jdbcType="VARCHAR" property="officeaddr" />
+    <result column="PROVINCE" jdbcType="VARCHAR" property="province" />
+    <result column="CITY" jdbcType="VARCHAR" property="city" />
+    <result column="OFFICEPOST" jdbcType="VARCHAR" property="officepost" />
+    <result column="OFFICENUMBER" jdbcType="VARCHAR" property="officenumber" />
+    <result column="OFFICEVPN" jdbcType="VARCHAR" property="officevpn" />
+    <result column="HOMEADDR" jdbcType="VARCHAR" property="homeaddr" />
+    <result column="HOMEPOST" jdbcType="VARCHAR" property="homepost" />
+    <result column="ECPNUMBER" jdbcType="VARCHAR" property="ecpnumber" />
+    <result column="OFFICEPHONE" jdbcType="VARCHAR" property="officephone" />
+    <result column="HOMEPHONE" jdbcType="VARCHAR" property="homephone" />
+    <result column="MOBILE" jdbcType="VARCHAR" property="mobile" />
+    <result column="MOBILEVPN" jdbcType="VARCHAR" property="mobilevpn" />
+    <result column="MOBILE2" jdbcType="VARCHAR" property="mobile2" />
+    <result column="FAXNUMBER" jdbcType="VARCHAR" property="faxnumber" />
+    <result column="EMAIL" jdbcType="VARCHAR" property="email" />
+    <result column="ECPACCOUNT" jdbcType="VARCHAR" property="ecpaccount" />
+    <result column="CUSTOMFIELD1" jdbcType="VARCHAR" property="customfield1" />
+    <result column="CUSTOMFIELD2" jdbcType="VARCHAR" property="customfield2" />
+    <result column="CUSTOMFIELD3" jdbcType="VARCHAR" property="customfield3" />
+    <result column="CUSTOMFIELD4" jdbcType="VARCHAR" property="customfield4" />
+    <result column="CUSTOMFIELD5" jdbcType="VARCHAR" property="customfield5" />
+    <result column="CUSTOMFIELD6" jdbcType="VARCHAR" property="customfield6" />
+    <result column="NOTE" jdbcType="VARCHAR" property="note" />
+    <result column="CREATEBY" jdbcType="VARCHAR" property="createby" />
+    <result column="CREATETIME" jdbcType="DATE" property="createtime" />
+    <result column="LASTUPDATEBY" jdbcType="VARCHAR" property="lastupdateby" />
+    <result column="LASTUPDATETIME" jdbcType="DATE" property="lastupdatetime" />
+    <result column="TAG" jdbcType="VARCHAR" property="tag" />
+    <result column="SPELLFULL" jdbcType="VARCHAR" property="spellfull" />
+    <result column="SPELLSIMPLE" jdbcType="VARCHAR" property="spellsimple" />
+    <result column="CORNET1" jdbcType="VARCHAR" property="cornet1" />
+    <result column="CORNET2" jdbcType="VARCHAR" property="cornet2" />
+    <result column="CORNET3" jdbcType="VARCHAR" property="cornet3" />
+    <result column="CORNET4" jdbcType="VARCHAR" property="cornet4" />
+    <result column="INVISIBLE" jdbcType="DECIMAL" property="invisible" />
+    <result column="ISHIDDEN" jdbcType="VARCHAR" property="ishidden" />
+    <result column="OWNER" jdbcType="VARCHAR" property="owner" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    CONTACTID, NAME, ENGLISHNAME, PHS, ALIAS, BIRTHDAY, FIRSTNAME, LASTNAME, IDENTITY, 
+    EMPLOYEENUMBER, SEX, COMPANY, DEPARTMENT, POSITION, MANAGER, ASSISTANT, OFFICEADDR, 
+    PROVINCE, CITY, OFFICEPOST, OFFICENUMBER, OFFICEVPN, HOMEADDR, HOMEPOST, ECPNUMBER, 
+    OFFICEPHONE, HOMEPHONE, MOBILE, MOBILEVPN, MOBILE2, FAXNUMBER, EMAIL, ECPACCOUNT, 
+    CUSTOMFIELD1, CUSTOMFIELD2, CUSTOMFIELD3, CUSTOMFIELD4, CUSTOMFIELD5, CUSTOMFIELD6, 
+    NOTE, CREATEBY, CREATETIME, LASTUPDATEBY, LASTUPDATETIME, TAG, SPELLFULL, SPELLSIMPLE, 
+    CORNET1, CORNET2, CORNET3, CORNET4, INVISIBLE, ISHIDDEN, OWNER
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from TM_EAB_CONTACT
+    where CONTACTID = #{contactid,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from TM_EAB_CONTACT
+    where CONTACTID = #{contactid,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="cn.com.pubinfo.ecp.cw.model.uab.EabContact">
+    insert into TM_EAB_CONTACT (CONTACTID, NAME, ENGLISHNAME, 
+      PHS, ALIAS, BIRTHDAY, 
+      FIRSTNAME, LASTNAME, IDENTITY, 
+      EMPLOYEENUMBER, SEX, COMPANY, 
+      DEPARTMENT, POSITION, MANAGER, 
+      ASSISTANT, OFFICEADDR, PROVINCE, 
+      CITY, OFFICEPOST, OFFICENUMBER, 
+      OFFICEVPN, HOMEADDR, HOMEPOST, 
+      ECPNUMBER, OFFICEPHONE, HOMEPHONE, 
+      MOBILE, MOBILEVPN, MOBILE2, 
+      FAXNUMBER, EMAIL, ECPACCOUNT, 
+      CUSTOMFIELD1, CUSTOMFIELD2, CUSTOMFIELD3, 
+      CUSTOMFIELD4, CUSTOMFIELD5, CUSTOMFIELD6, 
+      NOTE, CREATEBY, CREATETIME, 
+      LASTUPDATEBY, LASTUPDATETIME, TAG, 
+      SPELLFULL, SPELLSIMPLE, CORNET1, 
+      CORNET2, CORNET3, CORNET4, 
+      INVISIBLE, ISHIDDEN, OWNER
+      )
+    values (#{contactid,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{englishname,jdbcType=VARCHAR}, 
+      #{phs,jdbcType=VARCHAR}, #{alias,jdbcType=VARCHAR}, #{birthday,jdbcType=VARCHAR}, 
+      #{firstname,jdbcType=VARCHAR}, #{lastname,jdbcType=VARCHAR}, #{identity,jdbcType=VARCHAR}, 
+      #{employeenumber,jdbcType=VARCHAR}, #{sex,jdbcType=VARCHAR}, #{company,jdbcType=VARCHAR}, 
+      #{department,jdbcType=VARCHAR}, #{position,jdbcType=VARCHAR}, #{manager,jdbcType=VARCHAR}, 
+      #{assistant,jdbcType=VARCHAR}, #{officeaddr,jdbcType=VARCHAR}, #{province,jdbcType=VARCHAR}, 
+      #{city,jdbcType=VARCHAR}, #{officepost,jdbcType=VARCHAR}, #{officenumber,jdbcType=VARCHAR}, 
+      #{officevpn,jdbcType=VARCHAR}, #{homeaddr,jdbcType=VARCHAR}, #{homepost,jdbcType=VARCHAR}, 
+      #{ecpnumber,jdbcType=VARCHAR}, #{officephone,jdbcType=VARCHAR}, #{homephone,jdbcType=VARCHAR}, 
+      #{mobile,jdbcType=VARCHAR}, #{mobilevpn,jdbcType=VARCHAR}, #{mobile2,jdbcType=VARCHAR}, 
+      #{faxnumber,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, #{ecpaccount,jdbcType=VARCHAR}, 
+      #{customfield1,jdbcType=VARCHAR}, #{customfield2,jdbcType=VARCHAR}, #{customfield3,jdbcType=VARCHAR}, 
+      #{customfield4,jdbcType=VARCHAR}, #{customfield5,jdbcType=VARCHAR}, #{customfield6,jdbcType=VARCHAR}, 
+      #{note,jdbcType=VARCHAR}, #{createby,jdbcType=VARCHAR}, #{createtime,jdbcType=DATE}, 
+      #{lastupdateby,jdbcType=VARCHAR}, #{lastupdatetime,jdbcType=DATE}, #{tag,jdbcType=VARCHAR}, 
+      #{spellfull,jdbcType=VARCHAR}, #{spellsimple,jdbcType=VARCHAR}, #{cornet1,jdbcType=VARCHAR}, 
+      #{cornet2,jdbcType=VARCHAR}, #{cornet3,jdbcType=VARCHAR}, #{cornet4,jdbcType=VARCHAR}, 
+      #{invisible,jdbcType=DECIMAL}, #{ishidden,jdbcType=VARCHAR}, #{owner,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="cn.com.pubinfo.ecp.cw.model.uab.EabContact">
+    insert into TM_EAB_CONTACT
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="contactid != null">
+        CONTACTID,
+      </if>
+      <if test="name != null">
+        NAME,
+      </if>
+      <if test="englishname != null">
+        ENGLISHNAME,
+      </if>
+      <if test="phs != null">
+        PHS,
+      </if>
+      <if test="alias != null">
+        ALIAS,
+      </if>
+      <if test="birthday != null">
+        BIRTHDAY,
+      </if>
+      <if test="firstname != null">
+        FIRSTNAME,
+      </if>
+      <if test="lastname != null">
+        LASTNAME,
+      </if>
+      <if test="identity != null">
+        IDENTITY,
+      </if>
+      <if test="employeenumber != null">
+        EMPLOYEENUMBER,
+      </if>
+      <if test="sex != null">
+        SEX,
+      </if>
+      <if test="company != null">
+        COMPANY,
+      </if>
+      <if test="department != null">
+        DEPARTMENT,
+      </if>
+      <if test="position != null">
+        POSITION,
+      </if>
+      <if test="manager != null">
+        MANAGER,
+      </if>
+      <if test="assistant != null">
+        ASSISTANT,
+      </if>
+      <if test="officeaddr != null">
+        OFFICEADDR,
+      </if>
+      <if test="province != null">
+        PROVINCE,
+      </if>
+      <if test="city != null">
+        CITY,
+      </if>
+      <if test="officepost != null">
+        OFFICEPOST,
+      </if>
+      <if test="officenumber != null">
+        OFFICENUMBER,
+      </if>
+      <if test="officevpn != null">
+        OFFICEVPN,
+      </if>
+      <if test="homeaddr != null">
+        HOMEADDR,
+      </if>
+      <if test="homepost != null">
+        HOMEPOST,
+      </if>
+      <if test="ecpnumber != null">
+        ECPNUMBER,
+      </if>
+      <if test="officephone != null">
+        OFFICEPHONE,
+      </if>
+      <if test="homephone != null">
+        HOMEPHONE,
+      </if>
+      <if test="mobile != null">
+        MOBILE,
+      </if>
+      <if test="mobilevpn != null">
+        MOBILEVPN,
+      </if>
+      <if test="mobile2 != null">
+        MOBILE2,
+      </if>
+      <if test="faxnumber != null">
+        FAXNUMBER,
+      </if>
+      <if test="email != null">
+        EMAIL,
+      </if>
+      <if test="ecpaccount != null">
+        ECPACCOUNT,
+      </if>
+      <if test="customfield1 != null">
+        CUSTOMFIELD1,
+      </if>
+      <if test="customfield2 != null">
+        CUSTOMFIELD2,
+      </if>
+      <if test="customfield3 != null">
+        CUSTOMFIELD3,
+      </if>
+      <if test="customfield4 != null">
+        CUSTOMFIELD4,
+      </if>
+      <if test="customfield5 != null">
+        CUSTOMFIELD5,
+      </if>
+      <if test="customfield6 != null">
+        CUSTOMFIELD6,
+      </if>
+      <if test="note != null">
+        NOTE,
+      </if>
+      <if test="createby != null">
+        CREATEBY,
+      </if>
+      <if test="createtime != null">
+        CREATETIME,
+      </if>
+      <if test="lastupdateby != null">
+        LASTUPDATEBY,
+      </if>
+      <if test="lastupdatetime != null">
+        LASTUPDATETIME,
+      </if>
+      <if test="tag != null">
+        TAG,
+      </if>
+      <if test="spellfull != null">
+        SPELLFULL,
+      </if>
+      <if test="spellsimple != null">
+        SPELLSIMPLE,
+      </if>
+      <if test="cornet1 != null">
+        CORNET1,
+      </if>
+      <if test="cornet2 != null">
+        CORNET2,
+      </if>
+      <if test="cornet3 != null">
+        CORNET3,
+      </if>
+      <if test="cornet4 != null">
+        CORNET4,
+      </if>
+      <if test="invisible != null">
+        INVISIBLE,
+      </if>
+      <if test="ishidden != null">
+        ISHIDDEN,
+      </if>
+      <if test="owner != null">
+        OWNER,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="contactid != null">
+        #{contactid,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="englishname != null">
+        #{englishname,jdbcType=VARCHAR},
+      </if>
+      <if test="phs != null">
+        #{phs,jdbcType=VARCHAR},
+      </if>
+      <if test="alias != null">
+        #{alias,jdbcType=VARCHAR},
+      </if>
+      <if test="birthday != null">
+        #{birthday,jdbcType=VARCHAR},
+      </if>
+      <if test="firstname != null">
+        #{firstname,jdbcType=VARCHAR},
+      </if>
+      <if test="lastname != null">
+        #{lastname,jdbcType=VARCHAR},
+      </if>
+      <if test="identity != null">
+        #{identity,jdbcType=VARCHAR},
+      </if>
+      <if test="employeenumber != null">
+        #{employeenumber,jdbcType=VARCHAR},
+      </if>
+      <if test="sex != null">
+        #{sex,jdbcType=VARCHAR},
+      </if>
+      <if test="company != null">
+        #{company,jdbcType=VARCHAR},
+      </if>
+      <if test="department != null">
+        #{department,jdbcType=VARCHAR},
+      </if>
+      <if test="position != null">
+        #{position,jdbcType=VARCHAR},
+      </if>
+      <if test="manager != null">
+        #{manager,jdbcType=VARCHAR},
+      </if>
+      <if test="assistant != null">
+        #{assistant,jdbcType=VARCHAR},
+      </if>
+      <if test="officeaddr != null">
+        #{officeaddr,jdbcType=VARCHAR},
+      </if>
+      <if test="province != null">
+        #{province,jdbcType=VARCHAR},
+      </if>
+      <if test="city != null">
+        #{city,jdbcType=VARCHAR},
+      </if>
+      <if test="officepost != null">
+        #{officepost,jdbcType=VARCHAR},
+      </if>
+      <if test="officenumber != null">
+        #{officenumber,jdbcType=VARCHAR},
+      </if>
+      <if test="officevpn != null">
+        #{officevpn,jdbcType=VARCHAR},
+      </if>
+      <if test="homeaddr != null">
+        #{homeaddr,jdbcType=VARCHAR},
+      </if>
+      <if test="homepost != null">
+        #{homepost,jdbcType=VARCHAR},
+      </if>
+      <if test="ecpnumber != null">
+        #{ecpnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="officephone != null">
+        #{officephone,jdbcType=VARCHAR},
+      </if>
+      <if test="homephone != null">
+        #{homephone,jdbcType=VARCHAR},
+      </if>
+      <if test="mobile != null">
+        #{mobile,jdbcType=VARCHAR},
+      </if>
+      <if test="mobilevpn != null">
+        #{mobilevpn,jdbcType=VARCHAR},
+      </if>
+      <if test="mobile2 != null">
+        #{mobile2,jdbcType=VARCHAR},
+      </if>
+      <if test="faxnumber != null">
+        #{faxnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null">
+        #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="ecpaccount != null">
+        #{ecpaccount,jdbcType=VARCHAR},
+      </if>
+      <if test="customfield1 != null">
+        #{customfield1,jdbcType=VARCHAR},
+      </if>
+      <if test="customfield2 != null">
+        #{customfield2,jdbcType=VARCHAR},
+      </if>
+      <if test="customfield3 != null">
+        #{customfield3,jdbcType=VARCHAR},
+      </if>
+      <if test="customfield4 != null">
+        #{customfield4,jdbcType=VARCHAR},
+      </if>
+      <if test="customfield5 != null">
+        #{customfield5,jdbcType=VARCHAR},
+      </if>
+      <if test="customfield6 != null">
+        #{customfield6,jdbcType=VARCHAR},
+      </if>
+      <if test="note != null">
+        #{note,jdbcType=VARCHAR},
+      </if>
+      <if test="createby != null">
+        #{createby,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null">
+        #{createtime,jdbcType=DATE},
+      </if>
+      <if test="lastupdateby != null">
+        #{lastupdateby,jdbcType=VARCHAR},
+      </if>
+      <if test="lastupdatetime != null">
+        #{lastupdatetime,jdbcType=DATE},
+      </if>
+      <if test="tag != null">
+        #{tag,jdbcType=VARCHAR},
+      </if>
+      <if test="spellfull != null">
+        #{spellfull,jdbcType=VARCHAR},
+      </if>
+      <if test="spellsimple != null">
+        #{spellsimple,jdbcType=VARCHAR},
+      </if>
+      <if test="cornet1 != null">
+        #{cornet1,jdbcType=VARCHAR},
+      </if>
+      <if test="cornet2 != null">
+        #{cornet2,jdbcType=VARCHAR},
+      </if>
+      <if test="cornet3 != null">
+        #{cornet3,jdbcType=VARCHAR},
+      </if>
+      <if test="cornet4 != null">
+        #{cornet4,jdbcType=VARCHAR},
+      </if>
+      <if test="invisible != null">
+        #{invisible,jdbcType=DECIMAL},
+      </if>
+      <if test="ishidden != null">
+        #{ishidden,jdbcType=VARCHAR},
+      </if>
+      <if test="owner != null">
+        #{owner,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.com.pubinfo.ecp.cw.model.uab.EabContact">
+    update TM_EAB_CONTACT
+    <set>
+      <if test="name != null">
+        NAME = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="englishname != null">
+        ENGLISHNAME = #{englishname,jdbcType=VARCHAR},
+      </if>
+      <if test="phs != null">
+        PHS = #{phs,jdbcType=VARCHAR},
+      </if>
+      <if test="alias != null">
+        ALIAS = #{alias,jdbcType=VARCHAR},
+      </if>
+      <if test="birthday != null">
+        BIRTHDAY = #{birthday,jdbcType=VARCHAR},
+      </if>
+      <if test="firstname != null">
+        FIRSTNAME = #{firstname,jdbcType=VARCHAR},
+      </if>
+      <if test="lastname != null">
+        LASTNAME = #{lastname,jdbcType=VARCHAR},
+      </if>
+      <if test="identity != null">
+        IDENTITY = #{identity,jdbcType=VARCHAR},
+      </if>
+      <if test="employeenumber != null">
+        EMPLOYEENUMBER = #{employeenumber,jdbcType=VARCHAR},
+      </if>
+      <if test="sex != null">
+        SEX = #{sex,jdbcType=VARCHAR},
+      </if>
+      <if test="company != null">
+        COMPANY = #{company,jdbcType=VARCHAR},
+      </if>
+      <if test="department != null">
+        DEPARTMENT = #{department,jdbcType=VARCHAR},
+      </if>
+      <if test="position != null">
+        POSITION = #{position,jdbcType=VARCHAR},
+      </if>
+      <if test="manager != null">
+        MANAGER = #{manager,jdbcType=VARCHAR},
+      </if>
+      <if test="assistant != null">
+        ASSISTANT = #{assistant,jdbcType=VARCHAR},
+      </if>
+      <if test="officeaddr != null">
+        OFFICEADDR = #{officeaddr,jdbcType=VARCHAR},
+      </if>
+      <if test="province != null">
+        PROVINCE = #{province,jdbcType=VARCHAR},
+      </if>
+      <if test="city != null">
+        CITY = #{city,jdbcType=VARCHAR},
+      </if>
+      <if test="officepost != null">
+        OFFICEPOST = #{officepost,jdbcType=VARCHAR},
+      </if>
+      <if test="officenumber != null">
+        OFFICENUMBER = #{officenumber,jdbcType=VARCHAR},
+      </if>
+      <if test="officevpn != null">
+        OFFICEVPN = #{officevpn,jdbcType=VARCHAR},
+      </if>
+      <if test="homeaddr != null">
+        HOMEADDR = #{homeaddr,jdbcType=VARCHAR},
+      </if>
+      <if test="homepost != null">
+        HOMEPOST = #{homepost,jdbcType=VARCHAR},
+      </if>
+      <if test="ecpnumber != null">
+        ECPNUMBER = #{ecpnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="officephone != null">
+        OFFICEPHONE = #{officephone,jdbcType=VARCHAR},
+      </if>
+      <if test="homephone != null">
+        HOMEPHONE = #{homephone,jdbcType=VARCHAR},
+      </if>
+      <if test="mobile != null">
+        MOBILE = #{mobile,jdbcType=VARCHAR},
+      </if>
+      <if test="mobilevpn != null">
+        MOBILEVPN = #{mobilevpn,jdbcType=VARCHAR},
+      </if>
+      <if test="mobile2 != null">
+        MOBILE2 = #{mobile2,jdbcType=VARCHAR},
+      </if>
+      <if test="faxnumber != null">
+        FAXNUMBER = #{faxnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="email != null">
+        EMAIL = #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="ecpaccount != null">
+        ECPACCOUNT = #{ecpaccount,jdbcType=VARCHAR},
+      </if>
+      <if test="customfield1 != null">
+        CUSTOMFIELD1 = #{customfield1,jdbcType=VARCHAR},
+      </if>
+      <if test="customfield2 != null">
+        CUSTOMFIELD2 = #{customfield2,jdbcType=VARCHAR},
+      </if>
+      <if test="customfield3 != null">
+        CUSTOMFIELD3 = #{customfield3,jdbcType=VARCHAR},
+      </if>
+      <if test="customfield4 != null">
+        CUSTOMFIELD4 = #{customfield4,jdbcType=VARCHAR},
+      </if>
+      <if test="customfield5 != null">
+        CUSTOMFIELD5 = #{customfield5,jdbcType=VARCHAR},
+      </if>
+      <if test="customfield6 != null">
+        CUSTOMFIELD6 = #{customfield6,jdbcType=VARCHAR},
+      </if>
+      <if test="note != null">
+        NOTE = #{note,jdbcType=VARCHAR},
+      </if>
+      <if test="createby != null">
+        CREATEBY = #{createby,jdbcType=VARCHAR},
+      </if>
+      <if test="createtime != null">
+        CREATETIME = #{createtime,jdbcType=DATE},
+      </if>
+      <if test="lastupdateby != null">
+        LASTUPDATEBY = #{lastupdateby,jdbcType=VARCHAR},
+      </if>
+      <if test="lastupdatetime != null">
+        LASTUPDATETIME = #{lastupdatetime,jdbcType=DATE},
+      </if>
+      <if test="tag != null">
+        TAG = #{tag,jdbcType=VARCHAR},
+      </if>
+      <if test="spellfull != null">
+        SPELLFULL = #{spellfull,jdbcType=VARCHAR},
+      </if>
+      <if test="spellsimple != null">
+        SPELLSIMPLE = #{spellsimple,jdbcType=VARCHAR},
+      </if>
+      <if test="cornet1 != null">
+        CORNET1 = #{cornet1,jdbcType=VARCHAR},
+      </if>
+      <if test="cornet2 != null">
+        CORNET2 = #{cornet2,jdbcType=VARCHAR},
+      </if>
+      <if test="cornet3 != null">
+        CORNET3 = #{cornet3,jdbcType=VARCHAR},
+      </if>
+      <if test="cornet4 != null">
+        CORNET4 = #{cornet4,jdbcType=VARCHAR},
+      </if>
+      <if test="invisible != null">
+        INVISIBLE = #{invisible,jdbcType=DECIMAL},
+      </if>
+      <if test="ishidden != null">
+        ISHIDDEN = #{ishidden,jdbcType=VARCHAR},
+      </if>
+      <if test="owner != null">
+        OWNER = #{owner,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where CONTACTID = #{contactid,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.com.pubinfo.ecp.cw.model.uab.EabContact">
+    update TM_EAB_CONTACT
+    set NAME = #{name,jdbcType=VARCHAR},
+      ENGLISHNAME = #{englishname,jdbcType=VARCHAR},
+      PHS = #{phs,jdbcType=VARCHAR},
+      ALIAS = #{alias,jdbcType=VARCHAR},
+      BIRTHDAY = #{birthday,jdbcType=VARCHAR},
+      FIRSTNAME = #{firstname,jdbcType=VARCHAR},
+      LASTNAME = #{lastname,jdbcType=VARCHAR},
+      IDENTITY = #{identity,jdbcType=VARCHAR},
+      EMPLOYEENUMBER = #{employeenumber,jdbcType=VARCHAR},
+      SEX = #{sex,jdbcType=VARCHAR},
+      COMPANY = #{company,jdbcType=VARCHAR},
+      DEPARTMENT = #{department,jdbcType=VARCHAR},
+      POSITION = #{position,jdbcType=VARCHAR},
+      MANAGER = #{manager,jdbcType=VARCHAR},
+      ASSISTANT = #{assistant,jdbcType=VARCHAR},
+      OFFICEADDR = #{officeaddr,jdbcType=VARCHAR},
+      PROVINCE = #{province,jdbcType=VARCHAR},
+      CITY = #{city,jdbcType=VARCHAR},
+      OFFICEPOST = #{officepost,jdbcType=VARCHAR},
+      OFFICENUMBER = #{officenumber,jdbcType=VARCHAR},
+      OFFICEVPN = #{officevpn,jdbcType=VARCHAR},
+      HOMEADDR = #{homeaddr,jdbcType=VARCHAR},
+      HOMEPOST = #{homepost,jdbcType=VARCHAR},
+      ECPNUMBER = #{ecpnumber,jdbcType=VARCHAR},
+      OFFICEPHONE = #{officephone,jdbcType=VARCHAR},
+      HOMEPHONE = #{homephone,jdbcType=VARCHAR},
+      MOBILE = #{mobile,jdbcType=VARCHAR},
+      MOBILEVPN = #{mobilevpn,jdbcType=VARCHAR},
+      MOBILE2 = #{mobile2,jdbcType=VARCHAR},
+      FAXNUMBER = #{faxnumber,jdbcType=VARCHAR},
+      EMAIL = #{email,jdbcType=VARCHAR},
+      ECPACCOUNT = #{ecpaccount,jdbcType=VARCHAR},
+      CUSTOMFIELD1 = #{customfield1,jdbcType=VARCHAR},
+      CUSTOMFIELD2 = #{customfield2,jdbcType=VARCHAR},
+      CUSTOMFIELD3 = #{customfield3,jdbcType=VARCHAR},
+      CUSTOMFIELD4 = #{customfield4,jdbcType=VARCHAR},
+      CUSTOMFIELD5 = #{customfield5,jdbcType=VARCHAR},
+      CUSTOMFIELD6 = #{customfield6,jdbcType=VARCHAR},
+      NOTE = #{note,jdbcType=VARCHAR},
+      CREATEBY = #{createby,jdbcType=VARCHAR},
+      CREATETIME = #{createtime,jdbcType=DATE},
+      LASTUPDATEBY = #{lastupdateby,jdbcType=VARCHAR},
+      LASTUPDATETIME = #{lastupdatetime,jdbcType=DATE},
+      TAG = #{tag,jdbcType=VARCHAR},
+      SPELLFULL = #{spellfull,jdbcType=VARCHAR},
+      SPELLSIMPLE = #{spellsimple,jdbcType=VARCHAR},
+      CORNET1 = #{cornet1,jdbcType=VARCHAR},
+      CORNET2 = #{cornet2,jdbcType=VARCHAR},
+      CORNET3 = #{cornet3,jdbcType=VARCHAR},
+      CORNET4 = #{cornet4,jdbcType=VARCHAR},
+      INVISIBLE = #{invisible,jdbcType=DECIMAL},
+      ISHIDDEN = #{ishidden,jdbcType=VARCHAR},
+      OWNER = #{owner,jdbcType=VARCHAR}
+    where CONTACTID = #{contactid,jdbcType=VARCHAR}
+  </update>
+</mapper>

@@ -1,0 +1,14 @@
+# this is just demo layout
+
+<html>
+<header>
+	#parse("../screen/include/header.vm") 
+</header>
+
+<body>
+		
+	$screen_content
+	
+	#parse("../screen/include/footer.vm")
+</body>
+</html>

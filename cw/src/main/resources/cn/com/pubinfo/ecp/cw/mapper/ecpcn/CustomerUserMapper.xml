@@ -1,0 +1,973 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.com.pubinfo.ecp.cw.mapper.ecpcn.CustomerUserMapper">
+  <resultMap id="BaseResultMap" type="cn.com.pubinfo.ecp.cw.model.ecpcn.CustomerUser">
+    <id column="COL_ID" jdbcType="DECIMAL" property="colId" />
+    <result column="COL_PARENT_GROUP_ID" jdbcType="DECIMAL" property="colParentGroupId" />
+    <result column="COL_PARENT_DEP_ID" jdbcType="DECIMAL" property="colParentDepId" />
+    <result column="COL_PARENT_COMPANY_ID" jdbcType="DECIMAL" property="colParentCompanyId" />
+    <result column="COL_TYPE" jdbcType="DECIMAL" property="colType" />
+    <result column="COL_CALLING_NUMBER" jdbcType="VARCHAR" property="colCallingNumber" />
+    <result column="COL_NATIVE_PLACE" jdbcType="VARCHAR" property="colNativePlace" />
+    <result column="COL_BILLING_NUMBER" jdbcType="VARCHAR" property="colBillingNumber" />
+    <result column="COL_MOBILE" jdbcType="VARCHAR" property="colMobile" />
+    <result column="COL_BINDING_NUMBER_LIMIT" jdbcType="DECIMAL" property="colBindingNumberLimit" />
+    <result column="COL_ACCOUNTING_TYPE" jdbcType="DECIMAL" property="colAccountingType" />
+    <result column="COL_HOST_DOMAIN" jdbcType="VARCHAR" property="colHostDomain" />
+    <result column="COL_CDMA_PHONE" jdbcType="VARCHAR" property="colCdmaPhone" />
+    <result column="COL_PHONE_CODE_TYPE" jdbcType="DECIMAL" property="colPhoneCodeType" />
+    <result column="COL_SMS_DISPLAY_NUMBER" jdbcType="VARCHAR" property="colSmsDisplayNumber" />
+    <result column="COL_SEX" jdbcType="VARCHAR" property="colSex" />
+    <result column="COL_PHONECODE" jdbcType="VARCHAR" property="colPhonecode" />
+    <result column="COL_USER_DOMAIN" jdbcType="VARCHAR" property="colUserDomain" />
+    <result column="COL_LOGIN_ACCOUNT_TYPE" jdbcType="DECIMAL" property="colLoginAccountType" />
+    <result column="COL_MOBILE2" jdbcType="VARCHAR" property="colMobile2" />
+    <result column="COL_BIRTHDAY" jdbcType="DATE" property="colBirthday" />
+    <result column="COL_PASSWORD" jdbcType="VARCHAR" property="colPassword" />
+    <result column="COL_WORK_PHONE" jdbcType="VARCHAR" property="colWorkPhone" />
+    <result column="COL_LOGINNAME" jdbcType="VARCHAR" property="colLoginname" />
+    <result column="COL_CALLING_LIMIT" jdbcType="DECIMAL" property="colCallingLimit" />
+    <result column="COL_SMS_ACCEPT_NUMBER" jdbcType="VARCHAR" property="colSmsAcceptNumber" />
+    <result column="COL_TERMINAL_TYPE" jdbcType="DECIMAL" property="colTerminalType" />
+    <result column="COL_USER_STATE" jdbcType="DECIMAL" property="colUserState" />
+    <result column="COL_LT_PHONE" jdbcType="VARCHAR" property="colLtPhone" />
+    <result column="COL_APP_ID" jdbcType="DECIMAL" property="colAppId" />
+    <result column="COL_FOLK" jdbcType="VARCHAR" property="colFolk" />
+    <result column="COL_ACCOUNT_CARD_PRE" jdbcType="VARCHAR" property="colAccountCardPre" />
+    <result column="COL_AREA_ID" jdbcType="DECIMAL" property="colAreaId" />
+    <result column="COL_LAST_LOGIN" jdbcType="DATE" property="colLastLogin" />
+    <result column="COL_CERTIFICATE_TYPE" jdbcType="DECIMAL" property="colCertificateType" />
+    <result column="COL_ADDRESS" jdbcType="VARCHAR" property="colAddress" />
+    <result column="COL_FAX_EXT" jdbcType="VARCHAR" property="colFaxExt" />
+    <result column="COL_CERTIFICATE_ADDR" jdbcType="VARCHAR" property="colCertificateAddr" />
+    <result column="COL_FAX" jdbcType="VARCHAR" property="colFax" />
+    <result column="COL_POSTALCODE" jdbcType="VARCHAR" property="colPostalcode" />
+    <result column="COL_EMAIL" jdbcType="VARCHAR" property="colEmail" />
+    <result column="COL_CERTIFICATE_NO" jdbcType="VARCHAR" property="colCertificateNo" />
+    <result column="COL_NAME" jdbcType="VARCHAR" property="colName" />
+    <result column="COL_EDITOR" jdbcType="VARCHAR" property="colEditor" />
+    <result column="COL_SYSTEM_CODE" jdbcType="VARCHAR" property="colSystemCode" />
+    <result column="COL_CODE" jdbcType="VARCHAR" property="colCode" />
+    <result column="COL_CREATOR" jdbcType="VARCHAR" property="colCreator" />
+    <result column="COL_CREATE_ID" jdbcType="DECIMAL" property="colCreateId" />
+    <result column="COL_OWNER_COMPANY_ID" jdbcType="DECIMAL" property="colOwnerCompanyId" />
+    <result column="COL_EDITOR_ID" jdbcType="DECIMAL" property="colEditorId" />
+    <result column="COL_CREATE_TIME" jdbcType="DATE" property="colCreateTime" />
+    <result column="COL_EDIT_TIME" jdbcType="DATE" property="colEditTime" />
+    <result column="COL_STATE" jdbcType="DECIMAL" property="colState" />
+    <result column="COL_SORT" jdbcType="DECIMAL" property="colSort" />
+    <result column="COL_DESC" jdbcType="VARCHAR" property="colDesc" />
+    <result column="COL_NICKNAME" jdbcType="VARCHAR" property="colNickname" />
+    <result column="COL_VIDEO_PERMISSIONS" jdbcType="DECIMAL" property="colVideoPermissions" />
+    <result column="COL_OWNER_CLUSTER_ID" jdbcType="DECIMAL" property="colOwnerClusterId" />
+    <result column="COL_DEF_TELEPHONE" jdbcType="VARCHAR" property="colDefTelephone" />
+    <result column="COL_DEF_MOBILE" jdbcType="VARCHAR" property="colDefMobile" />
+    <result column="COL_TRIPLE_GP_USER_PHONE" jdbcType="VARCHAR" property="colTripleGpUserPhone" />
+    <result column="COL_TRIPLE_GP_WORK_PHONE" jdbcType="VARCHAR" property="colTripleGpWorkPhone" />
+    <result column="COL_TRIPLE_GP_MOBILE" jdbcType="VARCHAR" property="colTripleGpMobile" />
+    <result column="COL_ROOT_COMPANY_ID" jdbcType="DECIMAL" property="colRootCompanyId" />
+    <result column="COL_ROOT_COMPANY_CODE" jdbcType="VARCHAR" property="colRootCompanyCode" />
+    <result column="COL_USER_TYPE" jdbcType="VARCHAR" property="colUserType" />
+    <result column="COL_INVOICE_NAME" jdbcType="VARCHAR" property="colInvoiceName" />
+    <result column="COL_CHANNEL" jdbcType="VARCHAR" property="colChannel" />
+    <result column="COL_DEFAULT_ADMIN" jdbcType="DECIMAL" property="colDefaultAdmin" />
+    <result column="COL_WS_FLAG" jdbcType="VARCHAR" property="colWsFlag" />
+    <result column="COL_ID_ZJ" jdbcType="DECIMAL" property="colIdZj" />
+    <result column="COL_FLAG" jdbcType="VARCHAR" property="colFlag" />
+    <result column="COL_MARKET_CHANNEL" jdbcType="VARCHAR" property="colMarketChannel" />
+    <result column="COL_DEP_CODE" jdbcType="VARCHAR" property="colDepCode" />
+    <result column="COL_AREA_CODE" jdbcType="VARCHAR" property="colAreaCode" />
+    <result column="COL_FINDME_BY" jdbcType="DECIMAL" property="colFindmeBy" />
+    <result column="COL_SHARE_FRIEND" jdbcType="DECIMAL" property="colShareFriend" />
+    <result column="COL_ZJFW_CID" jdbcType="DECIMAL" property="colZjfwCid" />
+    <result column="COL_CLIENT_VERSION" jdbcType="VARCHAR" property="colClientVersion" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    COL_ID, COL_PARENT_GROUP_ID, COL_PARENT_DEP_ID, COL_PARENT_COMPANY_ID, COL_TYPE, 
+    COL_CALLING_NUMBER, COL_NATIVE_PLACE, COL_BILLING_NUMBER, COL_MOBILE, COL_BINDING_NUMBER_LIMIT, 
+    COL_ACCOUNTING_TYPE, COL_HOST_DOMAIN, COL_CDMA_PHONE, COL_PHONE_CODE_TYPE, COL_SMS_DISPLAY_NUMBER, 
+    COL_SEX, COL_PHONECODE, COL_USER_DOMAIN, COL_LOGIN_ACCOUNT_TYPE, COL_MOBILE2, COL_BIRTHDAY, 
+    COL_PASSWORD, COL_WORK_PHONE, COL_LOGINNAME, COL_CALLING_LIMIT, COL_SMS_ACCEPT_NUMBER, 
+    COL_TERMINAL_TYPE, COL_USER_STATE, COL_LT_PHONE, COL_APP_ID, COL_FOLK, COL_ACCOUNT_CARD_PRE, 
+    COL_AREA_ID, COL_LAST_LOGIN, COL_CERTIFICATE_TYPE, COL_ADDRESS, COL_FAX_EXT, COL_CERTIFICATE_ADDR, 
+    COL_FAX, COL_POSTALCODE, COL_EMAIL, COL_CERTIFICATE_NO, COL_NAME, COL_EDITOR, COL_SYSTEM_CODE, 
+    COL_CODE, COL_CREATOR, COL_CREATE_ID, COL_OWNER_COMPANY_ID, COL_EDITOR_ID, COL_CREATE_TIME, 
+    COL_EDIT_TIME, COL_STATE, COL_SORT, COL_DESC, COL_NICKNAME, COL_VIDEO_PERMISSIONS, 
+    COL_OWNER_CLUSTER_ID, COL_DEF_TELEPHONE, COL_DEF_MOBILE, COL_TRIPLE_GP_USER_PHONE, 
+    COL_TRIPLE_GP_WORK_PHONE, COL_TRIPLE_GP_MOBILE, COL_ROOT_COMPANY_ID, COL_ROOT_COMPANY_CODE, 
+    COL_USER_TYPE, COL_INVOICE_NAME, COL_CHANNEL, COL_DEFAULT_ADMIN, COL_WS_FLAG, COL_ID_ZJ, 
+    COL_FLAG, COL_MARKET_CHANNEL, COL_DEP_CODE, COL_AREA_CODE, COL_FINDME_BY, COL_SHARE_FRIEND, 
+    COL_ZJFW_CID, COL_CLIENT_VERSION
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.math.BigDecimal" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from ECP_CW_CUST_USER
+    where COL_ID = #{colId,jdbcType=DECIMAL}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.math.BigDecimal">
+    delete from ECP_CW_CUST_USER
+    where COL_ID = #{colId,jdbcType=DECIMAL}
+  </delete>
+  <insert id="insert" parameterType="cn.com.pubinfo.ecp.cw.model.ecpcn.CustomerUser">
+    insert into ECP_CW_CUST_USER (COL_ID, COL_PARENT_GROUP_ID, COL_PARENT_DEP_ID, 
+      COL_PARENT_COMPANY_ID, COL_TYPE, COL_CALLING_NUMBER, 
+      COL_NATIVE_PLACE, COL_BILLING_NUMBER, COL_MOBILE, 
+      COL_BINDING_NUMBER_LIMIT, COL_ACCOUNTING_TYPE, 
+      COL_HOST_DOMAIN, COL_CDMA_PHONE, COL_PHONE_CODE_TYPE, 
+      COL_SMS_DISPLAY_NUMBER, COL_SEX, COL_PHONECODE, 
+      COL_USER_DOMAIN, COL_LOGIN_ACCOUNT_TYPE, COL_MOBILE2, 
+      COL_BIRTHDAY, COL_PASSWORD, COL_WORK_PHONE, 
+      COL_LOGINNAME, COL_CALLING_LIMIT, COL_SMS_ACCEPT_NUMBER, 
+      COL_TERMINAL_TYPE, COL_USER_STATE, COL_LT_PHONE, 
+      COL_APP_ID, COL_FOLK, COL_ACCOUNT_CARD_PRE, 
+      COL_AREA_ID, COL_LAST_LOGIN, COL_CERTIFICATE_TYPE, 
+      COL_ADDRESS, COL_FAX_EXT, COL_CERTIFICATE_ADDR, 
+      COL_FAX, COL_POSTALCODE, COL_EMAIL, 
+      COL_CERTIFICATE_NO, COL_NAME, COL_EDITOR, 
+      COL_SYSTEM_CODE, COL_CODE, COL_CREATOR, 
+      COL_CREATE_ID, COL_OWNER_COMPANY_ID, COL_EDITOR_ID, 
+      COL_CREATE_TIME, COL_EDIT_TIME, COL_STATE, 
+      COL_SORT, COL_DESC, COL_NICKNAME, 
+      COL_VIDEO_PERMISSIONS, COL_OWNER_CLUSTER_ID, 
+      COL_DEF_TELEPHONE, COL_DEF_MOBILE, COL_TRIPLE_GP_USER_PHONE, 
+      COL_TRIPLE_GP_WORK_PHONE, COL_TRIPLE_GP_MOBILE, 
+      COL_ROOT_COMPANY_ID, COL_ROOT_COMPANY_CODE, COL_USER_TYPE, 
+      COL_INVOICE_NAME, COL_CHANNEL, COL_DEFAULT_ADMIN, 
+      COL_WS_FLAG, COL_ID_ZJ, COL_FLAG, 
+      COL_MARKET_CHANNEL, COL_DEP_CODE, COL_AREA_CODE, 
+      COL_FINDME_BY, COL_SHARE_FRIEND, COL_ZJFW_CID, 
+      COL_CLIENT_VERSION)
+    values (#{colId,jdbcType=DECIMAL}, #{colParentGroupId,jdbcType=DECIMAL}, #{colParentDepId,jdbcType=DECIMAL}, 
+      #{colParentCompanyId,jdbcType=DECIMAL}, #{colType,jdbcType=DECIMAL}, #{colCallingNumber,jdbcType=VARCHAR}, 
+      #{colNativePlace,jdbcType=VARCHAR}, #{colBillingNumber,jdbcType=VARCHAR}, #{colMobile,jdbcType=VARCHAR}, 
+      #{colBindingNumberLimit,jdbcType=DECIMAL}, #{colAccountingType,jdbcType=DECIMAL}, 
+      #{colHostDomain,jdbcType=VARCHAR}, #{colCdmaPhone,jdbcType=VARCHAR}, #{colPhoneCodeType,jdbcType=DECIMAL}, 
+      #{colSmsDisplayNumber,jdbcType=VARCHAR}, #{colSex,jdbcType=VARCHAR}, #{colPhonecode,jdbcType=VARCHAR}, 
+      #{colUserDomain,jdbcType=VARCHAR}, #{colLoginAccountType,jdbcType=DECIMAL}, #{colMobile2,jdbcType=VARCHAR}, 
+      #{colBirthday,jdbcType=DATE}, #{colPassword,jdbcType=VARCHAR}, #{colWorkPhone,jdbcType=VARCHAR}, 
+      #{colLoginname,jdbcType=VARCHAR}, #{colCallingLimit,jdbcType=DECIMAL}, #{colSmsAcceptNumber,jdbcType=VARCHAR}, 
+      #{colTerminalType,jdbcType=DECIMAL}, #{colUserState,jdbcType=DECIMAL}, #{colLtPhone,jdbcType=VARCHAR}, 
+      #{colAppId,jdbcType=DECIMAL}, #{colFolk,jdbcType=VARCHAR}, #{colAccountCardPre,jdbcType=VARCHAR}, 
+      #{colAreaId,jdbcType=DECIMAL}, #{colLastLogin,jdbcType=DATE}, #{colCertificateType,jdbcType=DECIMAL}, 
+      #{colAddress,jdbcType=VARCHAR}, #{colFaxExt,jdbcType=VARCHAR}, #{colCertificateAddr,jdbcType=VARCHAR}, 
+      #{colFax,jdbcType=VARCHAR}, #{colPostalcode,jdbcType=VARCHAR}, #{colEmail,jdbcType=VARCHAR}, 
+      #{colCertificateNo,jdbcType=VARCHAR}, #{colName,jdbcType=VARCHAR}, #{colEditor,jdbcType=VARCHAR}, 
+      #{colSystemCode,jdbcType=VARCHAR}, #{colCode,jdbcType=VARCHAR}, #{colCreator,jdbcType=VARCHAR}, 
+      #{colCreateId,jdbcType=DECIMAL}, #{colOwnerCompanyId,jdbcType=DECIMAL}, #{colEditorId,jdbcType=DECIMAL}, 
+      #{colCreateTime,jdbcType=DATE}, #{colEditTime,jdbcType=DATE}, #{colState,jdbcType=DECIMAL}, 
+      #{colSort,jdbcType=DECIMAL}, #{colDesc,jdbcType=VARCHAR}, #{colNickname,jdbcType=VARCHAR}, 
+      #{colVideoPermissions,jdbcType=DECIMAL}, #{colOwnerClusterId,jdbcType=DECIMAL}, 
+      #{colDefTelephone,jdbcType=VARCHAR}, #{colDefMobile,jdbcType=VARCHAR}, #{colTripleGpUserPhone,jdbcType=VARCHAR}, 
+      #{colTripleGpWorkPhone,jdbcType=VARCHAR}, #{colTripleGpMobile,jdbcType=VARCHAR}, 
+      #{colRootCompanyId,jdbcType=DECIMAL}, #{colRootCompanyCode,jdbcType=VARCHAR}, #{colUserType,jdbcType=VARCHAR}, 
+      #{colInvoiceName,jdbcType=VARCHAR}, #{colChannel,jdbcType=VARCHAR}, #{colDefaultAdmin,jdbcType=DECIMAL}, 
+      #{colWsFlag,jdbcType=VARCHAR}, #{colIdZj,jdbcType=DECIMAL}, #{colFlag,jdbcType=VARCHAR}, 
+      #{colMarketChannel,jdbcType=VARCHAR}, #{colDepCode,jdbcType=VARCHAR}, #{colAreaCode,jdbcType=VARCHAR}, 
+      #{colFindmeBy,jdbcType=DECIMAL}, #{colShareFriend,jdbcType=DECIMAL}, #{colZjfwCid,jdbcType=DECIMAL}, 
+      #{colClientVersion,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="cn.com.pubinfo.ecp.cw.model.ecpcn.CustomerUser">
+    insert into ECP_CW_CUST_USER
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="colId != null">
+        COL_ID,
+      </if>
+      <if test="colParentGroupId != null">
+        COL_PARENT_GROUP_ID,
+      </if>
+      <if test="colParentDepId != null">
+        COL_PARENT_DEP_ID,
+      </if>
+      <if test="colParentCompanyId != null">
+        COL_PARENT_COMPANY_ID,
+      </if>
+      <if test="colType != null">
+        COL_TYPE,
+      </if>
+      <if test="colCallingNumber != null">
+        COL_CALLING_NUMBER,
+      </if>
+      <if test="colNativePlace != null">
+        COL_NATIVE_PLACE,
+      </if>
+      <if test="colBillingNumber != null">
+        COL_BILLING_NUMBER,
+      </if>
+      <if test="colMobile != null">
+        COL_MOBILE,
+      </if>
+      <if test="colBindingNumberLimit != null">
+        COL_BINDING_NUMBER_LIMIT,
+      </if>
+      <if test="colAccountingType != null">
+        COL_ACCOUNTING_TYPE,
+      </if>
+      <if test="colHostDomain != null">
+        COL_HOST_DOMAIN,
+      </if>
+      <if test="colCdmaPhone != null">
+        COL_CDMA_PHONE,
+      </if>
+      <if test="colPhoneCodeType != null">
+        COL_PHONE_CODE_TYPE,
+      </if>
+      <if test="colSmsDisplayNumber != null">
+        COL_SMS_DISPLAY_NUMBER,
+      </if>
+      <if test="colSex != null">
+        COL_SEX,
+      </if>
+      <if test="colPhonecode != null">
+        COL_PHONECODE,
+      </if>
+      <if test="colUserDomain != null">
+        COL_USER_DOMAIN,
+      </if>
+      <if test="colLoginAccountType != null">
+        COL_LOGIN_ACCOUNT_TYPE,
+      </if>
+      <if test="colMobile2 != null">
+        COL_MOBILE2,
+      </if>
+      <if test="colBirthday != null">
+        COL_BIRTHDAY,
+      </if>
+      <if test="colPassword != null">
+        COL_PASSWORD,
+      </if>
+      <if test="colWorkPhone != null">
+        COL_WORK_PHONE,
+      </if>
+      <if test="colLoginname != null">
+        COL_LOGINNAME,
+      </if>
+      <if test="colCallingLimit != null">
+        COL_CALLING_LIMIT,
+      </if>
+      <if test="colSmsAcceptNumber != null">
+        COL_SMS_ACCEPT_NUMBER,
+      </if>
+      <if test="colTerminalType != null">
+        COL_TERMINAL_TYPE,
+      </if>
+      <if test="colUserState != null">
+        COL_USER_STATE,
+      </if>
+      <if test="colLtPhone != null">
+        COL_LT_PHONE,
+      </if>
+      <if test="colAppId != null">
+        COL_APP_ID,
+      </if>
+      <if test="colFolk != null">
+        COL_FOLK,
+      </if>
+      <if test="colAccountCardPre != null">
+        COL_ACCOUNT_CARD_PRE,
+      </if>
+      <if test="colAreaId != null">
+        COL_AREA_ID,
+      </if>
+      <if test="colLastLogin != null">
+        COL_LAST_LOGIN,
+      </if>
+      <if test="colCertificateType != null">
+        COL_CERTIFICATE_TYPE,
+      </if>
+      <if test="colAddress != null">
+        COL_ADDRESS,
+      </if>
+      <if test="colFaxExt != null">
+        COL_FAX_EXT,
+      </if>
+      <if test="colCertificateAddr != null">
+        COL_CERTIFICATE_ADDR,
+      </if>
+      <if test="colFax != null">
+        COL_FAX,
+      </if>
+      <if test="colPostalcode != null">
+        COL_POSTALCODE,
+      </if>
+      <if test="colEmail != null">
+        COL_EMAIL,
+      </if>
+      <if test="colCertificateNo != null">
+        COL_CERTIFICATE_NO,
+      </if>
+      <if test="colName != null">
+        COL_NAME,
+      </if>
+      <if test="colEditor != null">
+        COL_EDITOR,
+      </if>
+      <if test="colSystemCode != null">
+        COL_SYSTEM_CODE,
+      </if>
+      <if test="colCode != null">
+        COL_CODE,
+      </if>
+      <if test="colCreator != null">
+        COL_CREATOR,
+      </if>
+      <if test="colCreateId != null">
+        COL_CREATE_ID,
+      </if>
+      <if test="colOwnerCompanyId != null">
+        COL_OWNER_COMPANY_ID,
+      </if>
+      <if test="colEditorId != null">
+        COL_EDITOR_ID,
+      </if>
+      <if test="colCreateTime != null">
+        COL_CREATE_TIME,
+      </if>
+      <if test="colEditTime != null">
+        COL_EDIT_TIME,
+      </if>
+      <if test="colState != null">
+        COL_STATE,
+      </if>
+      <if test="colSort != null">
+        COL_SORT,
+      </if>
+      <if test="colDesc != null">
+        COL_DESC,
+      </if>
+      <if test="colNickname != null">
+        COL_NICKNAME,
+      </if>
+      <if test="colVideoPermissions != null">
+        COL_VIDEO_PERMISSIONS,
+      </if>
+      <if test="colOwnerClusterId != null">
+        COL_OWNER_CLUSTER_ID,
+      </if>
+      <if test="colDefTelephone != null">
+        COL_DEF_TELEPHONE,
+      </if>
+      <if test="colDefMobile != null">
+        COL_DEF_MOBILE,
+      </if>
+      <if test="colTripleGpUserPhone != null">
+        COL_TRIPLE_GP_USER_PHONE,
+      </if>
+      <if test="colTripleGpWorkPhone != null">
+        COL_TRIPLE_GP_WORK_PHONE,
+      </if>
+      <if test="colTripleGpMobile != null">
+        COL_TRIPLE_GP_MOBILE,
+      </if>
+      <if test="colRootCompanyId != null">
+        COL_ROOT_COMPANY_ID,
+      </if>
+      <if test="colRootCompanyCode != null">
+        COL_ROOT_COMPANY_CODE,
+      </if>
+      <if test="colUserType != null">
+        COL_USER_TYPE,
+      </if>
+      <if test="colInvoiceName != null">
+        COL_INVOICE_NAME,
+      </if>
+      <if test="colChannel != null">
+        COL_CHANNEL,
+      </if>
+      <if test="colDefaultAdmin != null">
+        COL_DEFAULT_ADMIN,
+      </if>
+      <if test="colWsFlag != null">
+        COL_WS_FLAG,
+      </if>
+      <if test="colIdZj != null">
+        COL_ID_ZJ,
+      </if>
+      <if test="colFlag != null">
+        COL_FLAG,
+      </if>
+      <if test="colMarketChannel != null">
+        COL_MARKET_CHANNEL,
+      </if>
+      <if test="colDepCode != null">
+        COL_DEP_CODE,
+      </if>
+      <if test="colAreaCode != null">
+        COL_AREA_CODE,
+      </if>
+      <if test="colFindmeBy != null">
+        COL_FINDME_BY,
+      </if>
+      <if test="colShareFriend != null">
+        COL_SHARE_FRIEND,
+      </if>
+      <if test="colZjfwCid != null">
+        COL_ZJFW_CID,
+      </if>
+      <if test="colClientVersion != null">
+        COL_CLIENT_VERSION,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="colId != null">
+        #{colId,jdbcType=DECIMAL},
+      </if>
+      <if test="colParentGroupId != null">
+        #{colParentGroupId,jdbcType=DECIMAL},
+      </if>
+      <if test="colParentDepId != null">
+        #{colParentDepId,jdbcType=DECIMAL},
+      </if>
+      <if test="colParentCompanyId != null">
+        #{colParentCompanyId,jdbcType=DECIMAL},
+      </if>
+      <if test="colType != null">
+        #{colType,jdbcType=DECIMAL},
+      </if>
+      <if test="colCallingNumber != null">
+        #{colCallingNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="colNativePlace != null">
+        #{colNativePlace,jdbcType=VARCHAR},
+      </if>
+      <if test="colBillingNumber != null">
+        #{colBillingNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="colMobile != null">
+        #{colMobile,jdbcType=VARCHAR},
+      </if>
+      <if test="colBindingNumberLimit != null">
+        #{colBindingNumberLimit,jdbcType=DECIMAL},
+      </if>
+      <if test="colAccountingType != null">
+        #{colAccountingType,jdbcType=DECIMAL},
+      </if>
+      <if test="colHostDomain != null">
+        #{colHostDomain,jdbcType=VARCHAR},
+      </if>
+      <if test="colCdmaPhone != null">
+        #{colCdmaPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="colPhoneCodeType != null">
+        #{colPhoneCodeType,jdbcType=DECIMAL},
+      </if>
+      <if test="colSmsDisplayNumber != null">
+        #{colSmsDisplayNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="colSex != null">
+        #{colSex,jdbcType=VARCHAR},
+      </if>
+      <if test="colPhonecode != null">
+        #{colPhonecode,jdbcType=VARCHAR},
+      </if>
+      <if test="colUserDomain != null">
+        #{colUserDomain,jdbcType=VARCHAR},
+      </if>
+      <if test="colLoginAccountType != null">
+        #{colLoginAccountType,jdbcType=DECIMAL},
+      </if>
+      <if test="colMobile2 != null">
+        #{colMobile2,jdbcType=VARCHAR},
+      </if>
+      <if test="colBirthday != null">
+        #{colBirthday,jdbcType=DATE},
+      </if>
+      <if test="colPassword != null">
+        #{colPassword,jdbcType=VARCHAR},
+      </if>
+      <if test="colWorkPhone != null">
+        #{colWorkPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="colLoginname != null">
+        #{colLoginname,jdbcType=VARCHAR},
+      </if>
+      <if test="colCallingLimit != null">
+        #{colCallingLimit,jdbcType=DECIMAL},
+      </if>
+      <if test="colSmsAcceptNumber != null">
+        #{colSmsAcceptNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="colTerminalType != null">
+        #{colTerminalType,jdbcType=DECIMAL},
+      </if>
+      <if test="colUserState != null">
+        #{colUserState,jdbcType=DECIMAL},
+      </if>
+      <if test="colLtPhone != null">
+        #{colLtPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="colAppId != null">
+        #{colAppId,jdbcType=DECIMAL},
+      </if>
+      <if test="colFolk != null">
+        #{colFolk,jdbcType=VARCHAR},
+      </if>
+      <if test="colAccountCardPre != null">
+        #{colAccountCardPre,jdbcType=VARCHAR},
+      </if>
+      <if test="colAreaId != null">
+        #{colAreaId,jdbcType=DECIMAL},
+      </if>
+      <if test="colLastLogin != null">
+        #{colLastLogin,jdbcType=DATE},
+      </if>
+      <if test="colCertificateType != null">
+        #{colCertificateType,jdbcType=DECIMAL},
+      </if>
+      <if test="colAddress != null">
+        #{colAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="colFaxExt != null">
+        #{colFaxExt,jdbcType=VARCHAR},
+      </if>
+      <if test="colCertificateAddr != null">
+        #{colCertificateAddr,jdbcType=VARCHAR},
+      </if>
+      <if test="colFax != null">
+        #{colFax,jdbcType=VARCHAR},
+      </if>
+      <if test="colPostalcode != null">
+        #{colPostalcode,jdbcType=VARCHAR},
+      </if>
+      <if test="colEmail != null">
+        #{colEmail,jdbcType=VARCHAR},
+      </if>
+      <if test="colCertificateNo != null">
+        #{colCertificateNo,jdbcType=VARCHAR},
+      </if>
+      <if test="colName != null">
+        #{colName,jdbcType=VARCHAR},
+      </if>
+      <if test="colEditor != null">
+        #{colEditor,jdbcType=VARCHAR},
+      </if>
+      <if test="colSystemCode != null">
+        #{colSystemCode,jdbcType=VARCHAR},
+      </if>
+      <if test="colCode != null">
+        #{colCode,jdbcType=VARCHAR},
+      </if>
+      <if test="colCreator != null">
+        #{colCreator,jdbcType=VARCHAR},
+      </if>
+      <if test="colCreateId != null">
+        #{colCreateId,jdbcType=DECIMAL},
+      </if>
+      <if test="colOwnerCompanyId != null">
+        #{colOwnerCompanyId,jdbcType=DECIMAL},
+      </if>
+      <if test="colEditorId != null">
+        #{colEditorId,jdbcType=DECIMAL},
+      </if>
+      <if test="colCreateTime != null">
+        #{colCreateTime,jdbcType=DATE},
+      </if>
+      <if test="colEditTime != null">
+        #{colEditTime,jdbcType=DATE},
+      </if>
+      <if test="colState != null">
+        #{colState,jdbcType=DECIMAL},
+      </if>
+      <if test="colSort != null">
+        #{colSort,jdbcType=DECIMAL},
+      </if>
+      <if test="colDesc != null">
+        #{colDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="colNickname != null">
+        #{colNickname,jdbcType=VARCHAR},
+      </if>
+      <if test="colVideoPermissions != null">
+        #{colVideoPermissions,jdbcType=DECIMAL},
+      </if>
+      <if test="colOwnerClusterId != null">
+        #{colOwnerClusterId,jdbcType=DECIMAL},
+      </if>
+      <if test="colDefTelephone != null">
+        #{colDefTelephone,jdbcType=VARCHAR},
+      </if>
+      <if test="colDefMobile != null">
+        #{colDefMobile,jdbcType=VARCHAR},
+      </if>
+      <if test="colTripleGpUserPhone != null">
+        #{colTripleGpUserPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="colTripleGpWorkPhone != null">
+        #{colTripleGpWorkPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="colTripleGpMobile != null">
+        #{colTripleGpMobile,jdbcType=VARCHAR},
+      </if>
+      <if test="colRootCompanyId != null">
+        #{colRootCompanyId,jdbcType=DECIMAL},
+      </if>
+      <if test="colRootCompanyCode != null">
+        #{colRootCompanyCode,jdbcType=VARCHAR},
+      </if>
+      <if test="colUserType != null">
+        #{colUserType,jdbcType=VARCHAR},
+      </if>
+      <if test="colInvoiceName != null">
+        #{colInvoiceName,jdbcType=VARCHAR},
+      </if>
+      <if test="colChannel != null">
+        #{colChannel,jdbcType=VARCHAR},
+      </if>
+      <if test="colDefaultAdmin != null">
+        #{colDefaultAdmin,jdbcType=DECIMAL},
+      </if>
+      <if test="colWsFlag != null">
+        #{colWsFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="colIdZj != null">
+        #{colIdZj,jdbcType=DECIMAL},
+      </if>
+      <if test="colFlag != null">
+        #{colFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="colMarketChannel != null">
+        #{colMarketChannel,jdbcType=VARCHAR},
+      </if>
+      <if test="colDepCode != null">
+        #{colDepCode,jdbcType=VARCHAR},
+      </if>
+      <if test="colAreaCode != null">
+        #{colAreaCode,jdbcType=VARCHAR},
+      </if>
+      <if test="colFindmeBy != null">
+        #{colFindmeBy,jdbcType=DECIMAL},
+      </if>
+      <if test="colShareFriend != null">
+        #{colShareFriend,jdbcType=DECIMAL},
+      </if>
+      <if test="colZjfwCid != null">
+        #{colZjfwCid,jdbcType=DECIMAL},
+      </if>
+      <if test="colClientVersion != null">
+        #{colClientVersion,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.com.pubinfo.ecp.cw.model.ecpcn.CustomerUser">
+    update ECP_CW_CUST_USER
+    <set>
+      <if test="colParentGroupId != null">
+        COL_PARENT_GROUP_ID = #{colParentGroupId,jdbcType=DECIMAL},
+      </if>
+      <if test="colParentDepId != null">
+        COL_PARENT_DEP_ID = #{colParentDepId,jdbcType=DECIMAL},
+      </if>
+      <if test="colParentCompanyId != null">
+        COL_PARENT_COMPANY_ID = #{colParentCompanyId,jdbcType=DECIMAL},
+      </if>
+      <if test="colType != null">
+        COL_TYPE = #{colType,jdbcType=DECIMAL},
+      </if>
+      <if test="colCallingNumber != null">
+        COL_CALLING_NUMBER = #{colCallingNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="colNativePlace != null">
+        COL_NATIVE_PLACE = #{colNativePlace,jdbcType=VARCHAR},
+      </if>
+      <if test="colBillingNumber != null">
+        COL_BILLING_NUMBER = #{colBillingNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="colMobile != null">
+        COL_MOBILE = #{colMobile,jdbcType=VARCHAR},
+      </if>
+      <if test="colBindingNumberLimit != null">
+        COL_BINDING_NUMBER_LIMIT = #{colBindingNumberLimit,jdbcType=DECIMAL},
+      </if>
+      <if test="colAccountingType != null">
+        COL_ACCOUNTING_TYPE = #{colAccountingType,jdbcType=DECIMAL},
+      </if>
+      <if test="colHostDomain != null">
+        COL_HOST_DOMAIN = #{colHostDomain,jdbcType=VARCHAR},
+      </if>
+      <if test="colCdmaPhone != null">
+        COL_CDMA_PHONE = #{colCdmaPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="colPhoneCodeType != null">
+        COL_PHONE_CODE_TYPE = #{colPhoneCodeType,jdbcType=DECIMAL},
+      </if>
+      <if test="colSmsDisplayNumber != null">
+        COL_SMS_DISPLAY_NUMBER = #{colSmsDisplayNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="colSex != null">
+        COL_SEX = #{colSex,jdbcType=VARCHAR},
+      </if>
+      <if test="colPhonecode != null">
+        COL_PHONECODE = #{colPhonecode,jdbcType=VARCHAR},
+      </if>
+      <if test="colUserDomain != null">
+        COL_USER_DOMAIN = #{colUserDomain,jdbcType=VARCHAR},
+      </if>
+      <if test="colLoginAccountType != null">
+        COL_LOGIN_ACCOUNT_TYPE = #{colLoginAccountType,jdbcType=DECIMAL},
+      </if>
+      <if test="colMobile2 != null">
+        COL_MOBILE2 = #{colMobile2,jdbcType=VARCHAR},
+      </if>
+      <if test="colBirthday != null">
+        COL_BIRTHDAY = #{colBirthday,jdbcType=DATE},
+      </if>
+      <if test="colPassword != null">
+        COL_PASSWORD = #{colPassword,jdbcType=VARCHAR},
+      </if>
+      <if test="colWorkPhone != null">
+        COL_WORK_PHONE = #{colWorkPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="colLoginname != null">
+        COL_LOGINNAME = #{colLoginname,jdbcType=VARCHAR},
+      </if>
+      <if test="colCallingLimit != null">
+        COL_CALLING_LIMIT = #{colCallingLimit,jdbcType=DECIMAL},
+      </if>
+      <if test="colSmsAcceptNumber != null">
+        COL_SMS_ACCEPT_NUMBER = #{colSmsAcceptNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="colTerminalType != null">
+        COL_TERMINAL_TYPE = #{colTerminalType,jdbcType=DECIMAL},
+      </if>
+      <if test="colUserState != null">
+        COL_USER_STATE = #{colUserState,jdbcType=DECIMAL},
+      </if>
+      <if test="colLtPhone != null">
+        COL_LT_PHONE = #{colLtPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="colAppId != null">
+        COL_APP_ID = #{colAppId,jdbcType=DECIMAL},
+      </if>
+      <if test="colFolk != null">
+        COL_FOLK = #{colFolk,jdbcType=VARCHAR},
+      </if>
+      <if test="colAccountCardPre != null">
+        COL_ACCOUNT_CARD_PRE = #{colAccountCardPre,jdbcType=VARCHAR},
+      </if>
+      <if test="colAreaId != null">
+        COL_AREA_ID = #{colAreaId,jdbcType=DECIMAL},
+      </if>
+      <if test="colLastLogin != null">
+        COL_LAST_LOGIN = #{colLastLogin,jdbcType=DATE},
+      </if>
+      <if test="colCertificateType != null">
+        COL_CERTIFICATE_TYPE = #{colCertificateType,jdbcType=DECIMAL},
+      </if>
+      <if test="colAddress != null">
+        COL_ADDRESS = #{colAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="colFaxExt != null">
+        COL_FAX_EXT = #{colFaxExt,jdbcType=VARCHAR},
+      </if>
+      <if test="colCertificateAddr != null">
+        COL_CERTIFICATE_ADDR = #{colCertificateAddr,jdbcType=VARCHAR},
+      </if>
+      <if test="colFax != null">
+        COL_FAX = #{colFax,jdbcType=VARCHAR},
+      </if>
+      <if test="colPostalcode != null">
+        COL_POSTALCODE = #{colPostalcode,jdbcType=VARCHAR},
+      </if>
+      <if test="colEmail != null">
+        COL_EMAIL = #{colEmail,jdbcType=VARCHAR},
+      </if>
+      <if test="colCertificateNo != null">
+        COL_CERTIFICATE_NO = #{colCertificateNo,jdbcType=VARCHAR},
+      </if>
+      <if test="colName != null">
+        COL_NAME = #{colName,jdbcType=VARCHAR},
+      </if>
+      <if test="colEditor != null">
+        COL_EDITOR = #{colEditor,jdbcType=VARCHAR},
+      </if>
+      <if test="colSystemCode != null">
+        COL_SYSTEM_CODE = #{colSystemCode,jdbcType=VARCHAR},
+      </if>
+      <if test="colCode != null">
+        COL_CODE = #{colCode,jdbcType=VARCHAR},
+      </if>
+      <if test="colCreator != null">
+        COL_CREATOR = #{colCreator,jdbcType=VARCHAR},
+      </if>
+      <if test="colCreateId != null">
+        COL_CREATE_ID = #{colCreateId,jdbcType=DECIMAL},
+      </if>
+      <if test="colOwnerCompanyId != null">
+        COL_OWNER_COMPANY_ID = #{colOwnerCompanyId,jdbcType=DECIMAL},
+      </if>
+      <if test="colEditorId != null">
+        COL_EDITOR_ID = #{colEditorId,jdbcType=DECIMAL},
+      </if>
+      <if test="colCreateTime != null">
+        COL_CREATE_TIME = #{colCreateTime,jdbcType=DATE},
+      </if>
+      <if test="colEditTime != null">
+        COL_EDIT_TIME = #{colEditTime,jdbcType=DATE},
+      </if>
+      <if test="colState != null">
+        COL_STATE = #{colState,jdbcType=DECIMAL},
+      </if>
+      <if test="colSort != null">
+        COL_SORT = #{colSort,jdbcType=DECIMAL},
+      </if>
+      <if test="colDesc != null">
+        COL_DESC = #{colDesc,jdbcType=VARCHAR},
+      </if>
+      <if test="colNickname != null">
+        COL_NICKNAME = #{colNickname,jdbcType=VARCHAR},
+      </if>
+      <if test="colVideoPermissions != null">
+        COL_VIDEO_PERMISSIONS = #{colVideoPermissions,jdbcType=DECIMAL},
+      </if>
+      <if test="colOwnerClusterId != null">
+        COL_OWNER_CLUSTER_ID = #{colOwnerClusterId,jdbcType=DECIMAL},
+      </if>
+      <if test="colDefTelephone != null">
+        COL_DEF_TELEPHONE = #{colDefTelephone,jdbcType=VARCHAR},
+      </if>
+      <if test="colDefMobile != null">
+        COL_DEF_MOBILE = #{colDefMobile,jdbcType=VARCHAR},
+      </if>
+      <if test="colTripleGpUserPhone != null">
+        COL_TRIPLE_GP_USER_PHONE = #{colTripleGpUserPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="colTripleGpWorkPhone != null">
+        COL_TRIPLE_GP_WORK_PHONE = #{colTripleGpWorkPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="colTripleGpMobile != null">
+        COL_TRIPLE_GP_MOBILE = #{colTripleGpMobile,jdbcType=VARCHAR},
+      </if>
+      <if test="colRootCompanyId != null">
+        COL_ROOT_COMPANY_ID = #{colRootCompanyId,jdbcType=DECIMAL},
+      </if>
+      <if test="colRootCompanyCode != null">
+        COL_ROOT_COMPANY_CODE = #{colRootCompanyCode,jdbcType=VARCHAR},
+      </if>
+      <if test="colUserType != null">
+        COL_USER_TYPE = #{colUserType,jdbcType=VARCHAR},
+      </if>
+      <if test="colInvoiceName != null">
+        COL_INVOICE_NAME = #{colInvoiceName,jdbcType=VARCHAR},
+      </if>
+      <if test="colChannel != null">
+        COL_CHANNEL = #{colChannel,jdbcType=VARCHAR},
+      </if>
+      <if test="colDefaultAdmin != null">
+        COL_DEFAULT_ADMIN = #{colDefaultAdmin,jdbcType=DECIMAL},
+      </if>
+      <if test="colWsFlag != null">
+        COL_WS_FLAG = #{colWsFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="colIdZj != null">
+        COL_ID_ZJ = #{colIdZj,jdbcType=DECIMAL},
+      </if>
+      <if test="colFlag != null">
+        COL_FLAG = #{colFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="colMarketChannel != null">
+        COL_MARKET_CHANNEL = #{colMarketChannel,jdbcType=VARCHAR},
+      </if>
+      <if test="colDepCode != null">
+        COL_DEP_CODE = #{colDepCode,jdbcType=VARCHAR},
+      </if>
+      <if test="colAreaCode != null">
+        COL_AREA_CODE = #{colAreaCode,jdbcType=VARCHAR},
+      </if>
+      <if test="colFindmeBy != null">
+        COL_FINDME_BY = #{colFindmeBy,jdbcType=DECIMAL},
+      </if>
+      <if test="colShareFriend != null">
+        COL_SHARE_FRIEND = #{colShareFriend,jdbcType=DECIMAL},
+      </if>
+      <if test="colZjfwCid != null">
+        COL_ZJFW_CID = #{colZjfwCid,jdbcType=DECIMAL},
+      </if>
+      <if test="colClientVersion != null">
+        COL_CLIENT_VERSION = #{colClientVersion,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where COL_ID = #{colId,jdbcType=DECIMAL}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="cn.com.pubinfo.ecp.cw.model.ecpcn.CustomerUser">
+    update ECP_CW_CUST_USER
+    set COL_PARENT_GROUP_ID = #{colParentGroupId,jdbcType=DECIMAL},
+      COL_PARENT_DEP_ID = #{colParentDepId,jdbcType=DECIMAL},
+      COL_PARENT_COMPANY_ID = #{colParentCompanyId,jdbcType=DECIMAL},
+      COL_TYPE = #{colType,jdbcType=DECIMAL},
+      COL_CALLING_NUMBER = #{colCallingNumber,jdbcType=VARCHAR},
+      COL_NATIVE_PLACE = #{colNativePlace,jdbcType=VARCHAR},
+      COL_BILLING_NUMBER = #{colBillingNumber,jdbcType=VARCHAR},
+      COL_MOBILE = #{colMobile,jdbcType=VARCHAR},
+      COL_BINDING_NUMBER_LIMIT = #{colBindingNumberLimit,jdbcType=DECIMAL},
+      COL_ACCOUNTING_TYPE = #{colAccountingType,jdbcType=DECIMAL},
+      COL_HOST_DOMAIN = #{colHostDomain,jdbcType=VARCHAR},
+      COL_CDMA_PHONE = #{colCdmaPhone,jdbcType=VARCHAR},
+      COL_PHONE_CODE_TYPE = #{colPhoneCodeType,jdbcType=DECIMAL},
+      COL_SMS_DISPLAY_NUMBER = #{colSmsDisplayNumber,jdbcType=VARCHAR},
+      COL_SEX = #{colSex,jdbcType=VARCHAR},
+      COL_PHONECODE = #{colPhonecode,jdbcType=VARCHAR},
+      COL_USER_DOMAIN = #{colUserDomain,jdbcType=VARCHAR},
+      COL_LOGIN_ACCOUNT_TYPE = #{colLoginAccountType,jdbcType=DECIMAL},
+      COL_MOBILE2 = #{colMobile2,jdbcType=VARCHAR},
+      COL_BIRTHDAY = #{colBirthday,jdbcType=DATE},
+      COL_PASSWORD = #{colPassword,jdbcType=VARCHAR},
+      COL_WORK_PHONE = #{colWorkPhone,jdbcType=VARCHAR},
+      COL_LOGINNAME = #{colLoginname,jdbcType=VARCHAR},
+      COL_CALLING_LIMIT = #{colCallingLimit,jdbcType=DECIMAL},
+      COL_SMS_ACCEPT_NUMBER = #{colSmsAcceptNumber,jdbcType=VARCHAR},
+      COL_TERMINAL_TYPE = #{colTerminalType,jdbcType=DECIMAL},
+      COL_USER_STATE = #{colUserState,jdbcType=DECIMAL},
+      COL_LT_PHONE = #{colLtPhone,jdbcType=VARCHAR},
+      COL_APP_ID = #{colAppId,jdbcType=DECIMAL},
+      COL_FOLK = #{colFolk,jdbcType=VARCHAR},
+      COL_ACCOUNT_CARD_PRE = #{colAccountCardPre,jdbcType=VARCHAR},
+      COL_AREA_ID = #{colAreaId,jdbcType=DECIMAL},
+      COL_LAST_LOGIN = #{colLastLogin,jdbcType=DATE},
+      COL_CERTIFICATE_TYPE = #{colCertificateType,jdbcType=DECIMAL},
+      COL_ADDRESS = #{colAddress,jdbcType=VARCHAR},
+      COL_FAX_EXT = #{colFaxExt,jdbcType=VARCHAR},
+      COL_CERTIFICATE_ADDR = #{colCertificateAddr,jdbcType=VARCHAR},
+      COL_FAX = #{colFax,jdbcType=VARCHAR},
+      COL_POSTALCODE = #{colPostalcode,jdbcType=VARCHAR},
+      COL_EMAIL = #{colEmail,jdbcType=VARCHAR},
+      COL_CERTIFICATE_NO = #{colCertificateNo,jdbcType=VARCHAR},
+      COL_NAME = #{colName,jdbcType=VARCHAR},
+      COL_EDITOR = #{colEditor,jdbcType=VARCHAR},
+      COL_SYSTEM_CODE = #{colSystemCode,jdbcType=VARCHAR},
+      COL_CODE = #{colCode,jdbcType=VARCHAR},
+      COL_CREATOR = #{colCreator,jdbcType=VARCHAR},
+      COL_CREATE_ID = #{colCreateId,jdbcType=DECIMAL},
+      COL_OWNER_COMPANY_ID = #{colOwnerCompanyId,jdbcType=DECIMAL},
+      COL_EDITOR_ID = #{colEditorId,jdbcType=DECIMAL},
+      COL_CREATE_TIME = #{colCreateTime,jdbcType=DATE},
+      COL_EDIT_TIME = #{colEditTime,jdbcType=DATE},
+      COL_STATE = #{colState,jdbcType=DECIMAL},
+      COL_SORT = #{colSort,jdbcType=DECIMAL},
+      COL_DESC = #{colDesc,jdbcType=VARCHAR},
+      COL_NICKNAME = #{colNickname,jdbcType=VARCHAR},
+      COL_VIDEO_PERMISSIONS = #{colVideoPermissions,jdbcType=DECIMAL},
+      COL_OWNER_CLUSTER_ID = #{colOwnerClusterId,jdbcType=DECIMAL},
+      COL_DEF_TELEPHONE = #{colDefTelephone,jdbcType=VARCHAR},
+      COL_DEF_MOBILE = #{colDefMobile,jdbcType=VARCHAR},
+      COL_TRIPLE_GP_USER_PHONE = #{colTripleGpUserPhone,jdbcType=VARCHAR},
+      COL_TRIPLE_GP_WORK_PHONE = #{colTripleGpWorkPhone,jdbcType=VARCHAR},
+      COL_TRIPLE_GP_MOBILE = #{colTripleGpMobile,jdbcType=VARCHAR},
+      COL_ROOT_COMPANY_ID = #{colRootCompanyId,jdbcType=DECIMAL},
+      COL_ROOT_COMPANY_CODE = #{colRootCompanyCode,jdbcType=VARCHAR},
+      COL_USER_TYPE = #{colUserType,jdbcType=VARCHAR},
+      COL_INVOICE_NAME = #{colInvoiceName,jdbcType=VARCHAR},
+      COL_CHANNEL = #{colChannel,jdbcType=VARCHAR},
+      COL_DEFAULT_ADMIN = #{colDefaultAdmin,jdbcType=DECIMAL},
+      COL_WS_FLAG = #{colWsFlag,jdbcType=VARCHAR},
+      COL_ID_ZJ = #{colIdZj,jdbcType=DECIMAL},
+      COL_FLAG = #{colFlag,jdbcType=VARCHAR},
+      COL_MARKET_CHANNEL = #{colMarketChannel,jdbcType=VARCHAR},
+      COL_DEP_CODE = #{colDepCode,jdbcType=VARCHAR},
+      COL_AREA_CODE = #{colAreaCode,jdbcType=VARCHAR},
+      COL_FINDME_BY = #{colFindmeBy,jdbcType=DECIMAL},
+      COL_SHARE_FRIEND = #{colShareFriend,jdbcType=DECIMAL},
+      COL_ZJFW_CID = #{colZjfwCid,jdbcType=DECIMAL},
+      COL_CLIENT_VERSION = #{colClientVersion,jdbcType=VARCHAR}
+    where COL_ID = #{colId,jdbcType=DECIMAL}
+  </update>
+</mapper>

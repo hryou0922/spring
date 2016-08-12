@@ -1,0 +1,19 @@
+<html>
+<header>
+	<title>$!page_title</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="zh-CN"/>
+      
+	#parse("/screen/include/header.vm") 
+	
+</header>
+
+<body>
+	
+	$screen_content
+	
+	#parse("/screen/include/footer.vm")
+</body>
+</html>
+
+

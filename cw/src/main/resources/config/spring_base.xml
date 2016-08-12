@@ -1,0 +1,149 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:task="http://www.springframework.org/schema/task"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+       http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+       ">
+     
+    <!-- 通过component-scan 让Spring扫描类，让Spring的代码注解生效  -->
+    <context:component-scan base-package="cn.com.pubinfo.ecp.cw"></context:component-scan>
+    <!-- 启动aop -->
+    <aop:aspectj-autoproxy/>
+    
+    <!-- activates annotation driven binding -->
+    <mvc:annotation-driven></mvc:annotation-driven>
+ 	
+ 	<!-- 加载配置文件 -->
+ 	<bean id="configProperties"
+		class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+		<property name="locations">
+			<list>
+				<value>classpath:config/db-config.properties</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="propertyConfigurer"
+		class="org.springframework.beans.factory.config.PreferencesPlaceholderConfigurer">
+		<property name="properties" ref="configProperties" />
+	</bean>
+ 	
+	<!-- 加载消息文件 -->
+	<bean id="messageSource"
+		class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+		<property name="basename" value="classpath:config/message.properties" />
+		<property name="defaultEncoding" value="UTF-8" />
+	</bean>
+	 
+	<!--
+	This bean sets up the Velocity environment for us based on a root path for templates.
+	Optionally, a properties file can be specified for more control over the Velocity
+	environment, but the defaults are pretty sane for file based template loading.
+	-->
+	<bean id="velocityConfig" class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">
+	    <property name="resourceLoaderPath">
+            <value>WEB-INF/page/</value>
+        </property>
+        <property name="velocityProperties">
+          <props>
+            <prop key="input.encoding">UTF-8</prop>
+            <prop key="output.encoding">UTF-8</prop>
+            <prop key="directive.foreach.counter.initial.value">0</prop>
+            <prop key="contentType">text/html;charset=UTF-8</prop>
+            <prop key="velocimacro.library">macro/macros.vm</prop>
+          </props>
+        </property>
+	</bean>
+	<bean id="ViewResolver" class="org.springframework.web.servlet.view.velocity.VelocityLayoutViewResolver">
+		<property name="contentType" value="text/html;charset=UTF-8" />
+	    <property name="suffix" value=".vm"/>
+        <property name="toolboxConfigLocation" value="/WEB-INF/page/toolbox.xml"/>
+        <property name="layoutUrl" value="layout/default.vm"/><!--指定layout文件-->
+	</bean>
+	
+	    
+    <!-- ###############异步线程池配置########################### -->
+    <task:annotation-driven executor="myExecutor" />
+	<task:executor id="myExecutor" pool-size="200"/>
+    
+    <!-- ###############异步线程池配(结束)########################### -->
+    
+	
+	<!--######################### Spring MVC配置（开始）############################### -->
+	<!-- ######拦截器相关配置###### -->
+	<!-- 权限校验 -->
+	<!--  
+	<bean id="rightChecker"
+		class="im.yixin.api.controller.interceptor.permission.RightChecker"></bean>
+	<bean id="consoleWhiteListChecker"
+		class="im.yixin.api.controller.interceptor.permission.ConsoleWhiteListChecker" />
+
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/**" />
+			<mvc:exclude-mapping path="/cdrs" />
+			<mvc:exclude-mapping path="/communicate" />
+			<mvc:exclude-mapping path="/console/**" />
+			<mvc:exclude-mapping path="/login" />
+
+			<mvc:exclude-mapping path="/test/**" />
+			<bean class="im.yixin.api.controller.interceptor.PermissionInterceptor">
+				<property name="permissionCheckers">
+					<list
+						value-type="im.yixin.api.controller.interceptor.permission.AbstractPermissionChecker">
+						<ref bean="rightChecker" />
+					</list>
+				</property>
+			</bean>
+
+		</mvc:interceptor>
+
+		<mvc:interceptor>
+			<mvc:mapping path="/cdrs" />
+			<mvc:mapping path="/communicate" />
+			<mvc:mapping path="/console/**" />
+			<mvc:mapping path="/login" />
+			<bean class="im.yixin.api.controller.interceptor.PermissionInterceptor">
+				<property name="permissionCheckers">
+					<list
+						value-type="im.yixin.api.controller.interceptor.permission.AbstractPermissionChecker">
+						<ref bean="consoleWhiteListChecker" />
+					</list>
+				</property>
+			</bean>
+		</mvc:interceptor>
+	</mvc:interceptors>
+
+	<mvc:annotation-driven conversion-service="conversionService">
+		<mvc:message-converters>
+			<bean class="im.yixin.api.controller.Converter">
+				<property name="writeAcceptCharset" value="false" />
+			</bean>
+		</mvc:message-converters>
+	</mvc:annotation-driven>
+	<mvc:default-servlet-handler />
+
+	<bean id="conversionService"
+		class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+		<property name="converters">
+			<list>
+				<bean class="im.yixin.api.controller.converter.StringToDateConverter" />
+			</list>
+		</property>
+	</bean>
+	-->
+	<!--######################### Spring MVC配置（结束）############################### -->
+	
+	
+	<!--######################### 加载外部spring配置文件（开始）############################### -->
+	<import resource="classpath*:config/spring_mybatis.xml"/>
+	
+	<!--######################### 加载外部spring配置文件（结束）############################### -->
+	
+</beans>
