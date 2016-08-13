@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<!--  
+	<properties resource="config.properties" />
+	-->
+	
+	<settings>
+		<setting name="cacheEnabled" value="false" />
+		<!--naming rule, ex: first_name => firstName -->
+		<setting name="mapUnderscoreToCamelCase" value="true" />
+	</settings>
+ 
+	<plugins>
+		<!--  
+		<plugin interceptor="cn.com.pubinfo.ecp.cw.interceptor.OraclePaginationInterceptor" />
+		-->
+		<plugin interceptor="study.hry.spring.mybatis.springmybatis.interceptor.simple.ExecutorWithPropertiesInterceptor">
+           <property name="prop1" value="prop1"/>
+           <property name="prop2" value="prop2"/>
+        </plugin>
+        <plugin interceptor="study.hry.spring.mybatis.springmybatis.interceptor.simple.MultipleHandlerInterceptor">
+        </plugin>
+        
+ 
+	</plugins>
+ 
+</configuration>

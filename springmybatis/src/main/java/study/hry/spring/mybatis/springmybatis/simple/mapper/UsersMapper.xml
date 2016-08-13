@@ -16,6 +16,13 @@
     from t_user
     where user_id = #{userId,jdbcType=CHAR}
   </select>
+  
+  <select id="queryList" parameterType="study.hry.spring.mybatis.springmybatis.simple.model.Users" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_user
+  </select>
+  
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
     delete from t_user
     where user_id = #{userId,jdbcType=CHAR}

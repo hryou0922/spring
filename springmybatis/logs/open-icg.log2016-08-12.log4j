@@ -1,0 +1,131 @@
+[open-icg] 2016-08-12 22:31:07.279 INFO  [AbstractApplicationContext.java:581] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@58d25a40: startup date [Fri Aug 12 22:31:07 CST 2016]; root of context hierarchy
+[open-icg] 2016-08-12 22:31:07.363 INFO  [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [simple/spring.xml]
+[open-icg] 2016-08-12 22:31:08.230 INFO  [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from URL [file:/C:/UU/work_tool/spring/springmybatis/target/classes/simple/spring_mybatis.xml]
+[open-icg] 2016-08-12 22:31:08.623 INFO  [PropertiesLoaderSupport.java:172] Loading properties file from class path resource [dbconfig.properties]
+[open-icg] 2016-08-12 22:31:10.538 INFO  [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+[open-icg] 2016-08-12 22:31:10.628 INFO  [SQLErrorCodesFactory.java:126] SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+[open-icg] 2016-08-12 23:01:55.088 INFO  [AbstractApplicationContext.java:581] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5f150435: startup date [Fri Aug 12 23:01:55 CST 2016]; root of context hierarchy
+[open-icg] 2016-08-12 23:01:55.178 INFO  [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [simple/spring.xml]
+[open-icg] 2016-08-12 23:01:55.708 INFO  [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from URL [file:/C:/UU/work_tool/spring/springmybatis/target/classes/simple/spring_mybatis.xml]
+[open-icg] 2016-08-12 23:01:56.118 INFO  [PropertiesLoaderSupport.java:172] Loading properties file from class path resource [dbconfig.properties]
+[open-icg] 2016-08-12 23:07:00.217 INFO  [AbstractApplicationContext.java:581] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5f150435: startup date [Fri Aug 12 23:07:00 CST 2016]; root of context hierarchy
+[open-icg] 2016-08-12 23:07:00.292 INFO  [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [multipledata/spring.xml]
+[open-icg] 2016-08-12 23:07:00.678 INFO  [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from URL [file:/C:/UU/work_tool/spring/springmybatis/target/classes/simple/spring_mybatis.xml]
+[open-icg] 2016-08-12 23:07:01.024 INFO  [PropertiesLoaderSupport.java:172] Loading properties file from class path resource [dbconfig.properties]
+[open-icg] 2016-08-12 23:17:06.238 INFO  [AbstractApplicationContext.java:581] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5f150435: startup date [Fri Aug 12 23:17:06 CST 2016]; root of context hierarchy
+[open-icg] 2016-08-12 23:17:06.314 INFO  [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [multipledata/spring.xml]
+[open-icg] 2016-08-12 23:17:06.710 INFO  [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from URL [file:/C:/UU/work_tool/spring/springmybatis/target/classes/simple/spring_mybatis.xml]
+[open-icg] 2016-08-12 23:17:07.189 INFO  [PropertiesLoaderSupport.java:172] Loading properties file from class path resource [dbconfig.properties]
+[open-icg] 2016-08-12 23:19:19.489 INFO  [AbstractApplicationContext.java:581] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5f150435: startup date [Fri Aug 12 23:19:19 CST 2016]; root of context hierarchy
+[open-icg] 2016-08-12 23:19:19.572 INFO  [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [multipledata/spring.xml]
+[open-icg] 2016-08-12 23:19:19.951 INFO  [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from URL [file:/C:/UU/work_tool/spring/springmybatis/target/classes/simple/spring_mybatis.xml]
+[open-icg] 2016-08-12 23:19:20.385 INFO  [PropertiesLoaderSupport.java:172] Loading properties file from class path resource [dbconfig.properties]
+[open-icg] 2016-08-12 23:21:22.132 INFO  [AbstractApplicationContext.java:581] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5f150435: startup date [Fri Aug 12 23:21:22 CST 2016]; root of context hierarchy
+[open-icg] 2016-08-12 23:21:22.210 INFO  [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [multipledata/spring.xml]
+[open-icg] 2016-08-12 23:21:22.573 INFO  [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from URL [file:/C:/UU/work_tool/spring/springmybatis/target/classes/multipledata/spring_mybatis.xml]
+[open-icg] 2016-08-12 23:21:22.906 INFO  [PropertiesLoaderSupport.java:172] Loading properties file from class path resource [dbconfig.properties]
+[open-icg] 2016-08-12 23:21:23.183 WARN  [AbstractApplicationContext.java:549] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userService': Unsatisfied dependency expressed through field 'usersMapper': No qualifying bean of type [study.hry.spring.mybatis.springmybatis.simple.mapper.UsersMapper] found for dependency [study.hry.spring.mybatis.springmybatis.simple.mapper.UsersMapper]: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [study.hry.spring.mybatis.springmybatis.simple.mapper.UsersMapper] found for dependency [study.hry.spring.mybatis.springmybatis.simple.mapper.UsersMapper]: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+[open-icg] 2016-08-12 23:23:21.570 INFO  [AbstractApplicationContext.java:581] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5f150435: startup date [Fri Aug 12 23:23:21 CST 2016]; root of context hierarchy
+[open-icg] 2016-08-12 23:23:21.664 INFO  [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [multipledata/spring.xml]
+[open-icg] 2016-08-12 23:23:21.989 INFO  [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from URL [file:/C:/UU/work_tool/spring/springmybatis/target/classes/multipledata/spring_mybatis.xml]
+[open-icg] 2016-08-12 23:23:22.248 INFO  [PropertiesLoaderSupport.java:172] Loading properties file from class path resource [dbconfig.properties]
+[open-icg] 2016-08-12 23:23:23.185 WARN  [AbstractApplicationContext.java:549] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in URL [file:/C:/UU/work_tool/spring/springmybatis/target/classes/multipledata/spring_mybatis.xml]: Invocation of init method failed; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [C:\UU\work_tool\spring\springmybatis\target\classes\study\hry\spring\mybatis\springmybatis\multipledata\mapper\test1\UsersTest1Mapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Error resolving class. Cause: org.apache.ibatis.type.TypeException: Could not resolve type alias 'study.hry.spring.mybatis.springmybatis.multipledata.model.test1.Users'.  Cause: java.lang.ClassNotFoundException: Cannot find class: study.hry.spring.mybatis.springmybatis.multipledata.model.test1.Users
+[open-icg] 2016-08-12 23:24:38.539 INFO  [AbstractApplicationContext.java:581] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5f150435: startup date [Fri Aug 12 23:24:38 CST 2016]; root of context hierarchy
+[open-icg] 2016-08-12 23:24:38.626 INFO  [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [multipledata/spring.xml]
+[open-icg] 2016-08-12 23:24:38.962 INFO  [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from URL [file:/C:/UU/work_tool/spring/springmybatis/target/classes/multipledata/spring_mybatis.xml]
+[open-icg] 2016-08-12 23:24:39.225 INFO  [PropertiesLoaderSupport.java:172] Loading properties file from class path resource [dbconfig.properties]
+[open-icg] 2016-08-12 23:24:40.293 ERROR [MapperFactoryBean.java:83] Error while adding the mapper 'interface study.hry.spring.mybatis.springmybatis.multipledata.mapper.test1.UsersTest1Mapper' to configuration.
+org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Wrong namespace. Expected 'study.hry.spring.mybatis.springmybatis.multipledata.mapper.test1.UsersTest1Mapper' but found 'study.hry.spring.mybatis.springmybatis.multipledata.mapper.test1.UsersMapper'.
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:120)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:92)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.loadXmlResource(MapperAnnotationBuilder.java:170)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parse(MapperAnnotationBuilder.java:121)
+	at org.apache.ibatis.binding.MapperRegistry.addMapper(MapperRegistry.java:72)
+	at org.apache.ibatis.session.Configuration.addMapper(Configuration.java:713)
+	at org.mybatis.spring.mapper.MapperFactoryBean.checkDaoConfig(MapperFactoryBean.java:81)
+	at org.springframework.dao.support.DaoSupport.afterPropertiesSet(DaoSupport.java:44)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1637)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:545)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:757)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:861)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:541)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:83)
+	at study.hry.spring.mybatis.springmybatis.multipledata.MultipledataMain.<init>(MultipledataMain.java:16)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.junit.runners.BlockJUnit4ClassRunner.createTest(BlockJUnit4ClassRunner.java:217)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.runReflectiveCall(BlockJUnit4ClassRunner.java:266)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.BlockJUnit4ClassRunner.methodBlock(BlockJUnit4ClassRunner.java:263)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.apache.ibatis.builder.BuilderException: Wrong namespace. Expected 'study.hry.spring.mybatis.springmybatis.multipledata.mapper.test1.UsersTest1Mapper' but found 'study.hry.spring.mybatis.springmybatis.multipledata.mapper.test1.UsersMapper'.
+	at org.apache.ibatis.builder.MapperBuilderAssistant.setCurrentNamespace(MapperBuilderAssistant.java:78)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:112)
+	... 43 more
+[open-icg] 2016-08-12 23:24:40.303 WARN  [AbstractApplicationContext.java:549] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'usersTest1Mapper' defined in file [C:\UU\work_tool\spring\springmybatis\target\classes\study\hry\spring\mybatis\springmybatis\multipledata\mapper\test1\UsersTest1Mapper.class]: Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. Cause: org.apache.ibatis.builder.BuilderException: Wrong namespace. Expected 'study.hry.spring.mybatis.springmybatis.multipledata.mapper.test1.UsersTest1Mapper' but found 'study.hry.spring.mybatis.springmybatis.multipledata.mapper.test1.UsersMapper'.
+[open-icg] 2016-08-12 23:25:37.384 INFO  [AbstractApplicationContext.java:581] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5f150435: startup date [Fri Aug 12 23:25:37 CST 2016]; root of context hierarchy
+[open-icg] 2016-08-12 23:25:37.455 INFO  [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [multipledata/spring.xml]
+[open-icg] 2016-08-12 23:25:37.796 INFO  [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from URL [file:/C:/UU/work_tool/spring/springmybatis/target/classes/multipledata/spring_mybatis.xml]
+[open-icg] 2016-08-12 23:25:38.088 INFO  [PropertiesLoaderSupport.java:172] Loading properties file from class path resource [dbconfig.properties]
+[open-icg] 2016-08-12 23:25:40.331 INFO  [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+[open-icg] 2016-08-12 23:25:40.387 INFO  [SQLErrorCodesFactory.java:126] SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+[open-icg] 2016-08-12 23:27:25.314 INFO  [AbstractApplicationContext.java:581] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5f150435: startup date [Fri Aug 12 23:27:25 CST 2016]; root of context hierarchy
+[open-icg] 2016-08-12 23:27:25.388 INFO  [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [multipledata/spring.xml]
+[open-icg] 2016-08-12 23:27:25.705 INFO  [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from URL [file:/C:/UU/work_tool/spring/springmybatis/target/classes/multipledata/spring_mybatis.xml]
+[open-icg] 2016-08-12 23:27:25.968 INFO  [PropertiesLoaderSupport.java:172] Loading properties file from class path resource [dbconfig.properties]
+[open-icg] 2016-08-12 23:27:27.938 INFO  [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+[open-icg] 2016-08-12 23:27:28.001 INFO  [SQLErrorCodesFactory.java:126] SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+[open-icg] 2016-08-12 23:28:30.541 INFO  [AbstractApplicationContext.java:581] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@282ba1e: startup date [Fri Aug 12 23:28:30 CST 2016]; root of context hierarchy
+[open-icg] 2016-08-12 23:28:30.624 INFO  [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [multipledata/spring.xml]
+[open-icg] 2016-08-12 23:28:30.950 INFO  [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from URL [file:/C:/UU/work_tool/spring/springmybatis/target/classes/multipledata/spring_mybatis.xml]
+[open-icg] 2016-08-12 23:28:31.248 INFO  [PropertiesLoaderSupport.java:172] Loading properties file from class path resource [dbconfig.properties]
+[open-icg] 2016-08-12 23:28:33.303 INFO  [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+[open-icg] 2016-08-12 23:28:33.385 INFO  [SQLErrorCodesFactory.java:126] SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+[open-icg] 2016-08-12 23:28:55.514 INFO  [AbstractApplicationContext.java:581] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@4b9e255: startup date [Fri Aug 12 23:28:55 CST 2016]; root of context hierarchy
+[open-icg] 2016-08-12 23:28:55.599 INFO  [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [multipledata/spring.xml]
+[open-icg] 2016-08-12 23:28:55.996 INFO  [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from URL [file:/C:/UU/work_tool/spring/springmybatis/target/classes/multipledata/spring_mybatis.xml]
+[open-icg] 2016-08-12 23:28:56.305 INFO  [PropertiesLoaderSupport.java:172] Loading properties file from class path resource [dbconfig.properties]
+[open-icg] 2016-08-12 23:29:08.747 INFO  [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+[open-icg] 2016-08-12 23:29:08.968 INFO  [SQLErrorCodesFactory.java:126] SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+[open-icg] 2016-08-12 23:30:15.150 INFO  [AbstractApplicationContext.java:581] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@282ba1e: startup date [Fri Aug 12 23:30:15 CST 2016]; root of context hierarchy
+[open-icg] 2016-08-12 23:30:15.218 INFO  [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [multipledata/spring.xml]
+[open-icg] 2016-08-12 23:30:15.534 INFO  [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from URL [file:/C:/UU/work_tool/spring/springmybatis/target/classes/multipledata/spring_mybatis.xml]
+[open-icg] 2016-08-12 23:30:15.859 INFO  [PropertiesLoaderSupport.java:172] Loading properties file from class path resource [dbconfig.properties]
+[open-icg] 2016-08-12 23:30:18.046 INFO  [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+[open-icg] 2016-08-12 23:30:18.109 INFO  [SQLErrorCodesFactory.java:126] SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+[open-icg] 2016-08-12 23:31:13.797 INFO  [AbstractApplicationContext.java:581] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@4b9e255: startup date [Fri Aug 12 23:31:13 CST 2016]; root of context hierarchy
+[open-icg] 2016-08-12 23:31:13.919 INFO  [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [multipledata/spring.xml]
+[open-icg] 2016-08-12 23:31:14.293 INFO  [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from URL [file:/C:/UU/work_tool/spring/springmybatis/target/classes/multipledata/spring_mybatis.xml]
+[open-icg] 2016-08-12 23:31:14.661 INFO  [PropertiesLoaderSupport.java:172] Loading properties file from class path resource [dbconfig.properties]
+[open-icg] 2016-08-12 23:31:24.834 INFO  [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+[open-icg] 2016-08-12 23:31:25.041 INFO  [SQLErrorCodesFactory.java:126] SQLErrorCodes loaded: [DB2, Derby, H2, HSQL, Informix, MS-SQL, MySQL, Oracle, PostgreSQL, Sybase, Hana]
+[open-icg] 2016-08-12 23:32:46.627 INFO  [AbstractApplicationContext.java:581] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@282ba1e: startup date [Fri Aug 12 23:32:46 CST 2016]; root of context hierarchy
+[open-icg] 2016-08-12 23:32:46.722 INFO  [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [multipledata/spring.xml]
+[open-icg] 2016-08-12 23:32:47.092 INFO  [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from URL [file:/C:/UU/work_tool/spring/springmybatis/target/classes/multipledata/spring_mybatis.xml]
+[open-icg] 2016-08-12 23:32:47.397 INFO  [PropertiesLoaderSupport.java:172] Loading properties file from class path resource [dbconfig.properties]
+[open-icg] 2016-08-12 23:33:01.195 INFO  [AbstractApplicationContext.java:581] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@282ba1e: startup date [Fri Aug 12 23:33:01 CST 2016]; root of context hierarchy
+[open-icg] 2016-08-12 23:33:01.268 INFO  [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from class path resource [multipledata/spring.xml]
+[open-icg] 2016-08-12 23:33:01.646 INFO  [XmlBeanDefinitionReader.java:317] Loading XML bean definitions from URL [file:/C:/UU/work_tool/spring/springmybatis/target/classes/multipledata/spring_mybatis.xml]
+[open-icg] 2016-08-12 23:33:01.921 INFO  [PropertiesLoaderSupport.java:172] Loading properties file from class path resource [dbconfig.properties]
