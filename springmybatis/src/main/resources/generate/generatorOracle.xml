@@ -86,8 +86,70 @@
 			一些模型类型MBG将生成一个单一的域类为每个表,和其他可能产生不同的类MBG取决于表的结构。 escapeWildcards：排除通配符。这意味着无论SQL通配符(' 
 			_ '和' % ')的模式和表名都应该避免在搜寻列。 这是一些驱动要求如果模式或表包含一个SQL通配符(例如,如果一个表的名字是MY_TABLE,一些驱动要求的下划线字符进行转义)。 -->
 		<!-- 要生成那些表(更改tableName和domainObjectName就可以) -->
+		<!--  		
 		<table schema="ecpcn" tableName="ecp_cw_cust_user" domainObjectName="CustomerUser" enableInsert="true" enableUpdateByPrimaryKey="true" enableCountByExample="false" enableUpdateByExample="false"
-			enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true" />
+			enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true" >
+			<columnRenamingRule searchString="COL_" replaceString=""/>
+		</table>
+		
 			
+		<table schema="ecpcn" tableName="ecp_cw_cust_company" domainObjectName="CustomerCompany" enableInsert="true" enableUpdateByPrimaryKey="true" enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true" >
+			<columnRenamingRule searchString="COL_" replaceString=""/>
+		</table>
+		<table schema="ecpcn" tableName="ecp_cw_account" domainObjectName="UserAccount" enableInsert="true" enableUpdateByPrimaryKey="true" enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true" >
+			<columnRenamingRule searchString="COL_" replaceString=""/>
+		</table>
+		<table schema="ecpcn" tableName="ecp_cw_company_perm" domainObjectName="CompanyPermission" enableInsert="true" enableUpdateByPrimaryKey="true" enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true" >
+			<columnRenamingRule searchString="COL_" replaceString=""/>
+		</table>
+		
+		<table schema="ecpcn" tableName="ecp_cw_package_perm" domainObjectName="EcpPackagePermission" enableInsert="true" enableUpdateByPrimaryKey="true" enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true" >
+			<columnRenamingRule searchString="COL_" replaceString=""/>
+		</table>
+		<table schema="ecpcn" tableName="ecp_cw_personal_perm" domainObjectName="PersonalPermission" enableInsert="true" enableUpdateByPrimaryKey="true" enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true" >
+			<columnRenamingRule searchString="COL_" replaceString=""/>
+		</table>
+		<table schema="ecpcn" tableName="ecp_cw_public_perm" domainObjectName="PublicPermission" enableInsert="true" enableUpdateByPrimaryKey="true" enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true" >
+			<columnRenamingRule searchString="COL_" replaceString=""/>
+		</table>
+
+		
+		<table schema="ecpcn" tableName="ecp_cw_program" domainObjectName="Program" enableInsert="true" enableUpdateByPrimaryKey="true" enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true" >
+			<columnRenamingRule searchString="COL_" replaceString=""/>
+		</table>
+		<table schema="ecpcn" tableName="cust_company_using_zteab" domainObjectName="CompanyUsingZteab" enableInsert="true" enableUpdateByPrimaryKey="true" enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true" >
+			<columnRenamingRule searchString="COL_" replaceString=""/>
+		</table>
+		
+		<table schema="ecpcn" tableName="ecp_cw_cust_dep" domainObjectName="CustomerDepartment" enableInsert="true" enableUpdateByPrimaryKey="true" enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true" >
+			<columnRenamingRule searchString="COL_" replaceString=""/>
+		</table>
+		
+		<table schema="ecpcn" tableName="ecp_cw_custuser_role" domainObjectName="CustuserRole" enableInsert="true" enableUpdateByPrimaryKey="true" enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true" >
+			<columnRenamingRule searchString="COL_" replaceString=""/>
+		</table>
+		-->
+		<table schema="ecpcn" tableName="ecp_cw_role" domainObjectName="Role" enableInsert="true" enableUpdateByPrimaryKey="true" enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true" >
+			<columnRenamingRule searchString="COL_" replaceString=""/>
+		</table>
+		
+		
+		
+		
 	</context>
 </generatorConfiguration>
+
+
+
+
