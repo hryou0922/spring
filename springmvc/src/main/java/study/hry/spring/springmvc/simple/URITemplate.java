@@ -40,7 +40,12 @@ public class URITemplate {
 		return "uritemplate/"+page;
 	}
 	
-	
+	/**
+	 * http://localhost:8080/springmvc/mvc/owners/requestParam
+	 * 
+	 * @param inputStr
+	 * @return
+	 */
 	@RequestMapping("/requestParam")    
 	public String requestParam(@RequestParam(value="inputStr", required=true, defaultValue="noInput") String inputStr) {    
 		System.out.println(inputStr); 
@@ -61,9 +66,11 @@ public class URITemplate {
 	}
 	
 	/**
+	 * http://localhost:8080/springmvc/mvc/owners/responseBody
+	 * 
 	 * @ResponseBody:直接将输入内容返回给调用者
 	 */
-	@RequestMapping(value = "/responseBody", method = RequestMethod.POST)
+	@RequestMapping(value = "/responseBody", method = RequestMethod.GET)
 	@ResponseBody
 	public String responseBody(){
 		// 将返回输入到返回端
