@@ -1,0 +1,108 @@
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery validation plug-in - main demo</title>
+ 
+	<script src="/springvelocity/jquery/jquery-1.12.3.js"></script>
+	<script src="/springvelocity/jqueryValidation/1.14.0/dist/jquery.validate.js"></script>
+	<script src="/springvelocity/jqueryValidation/1.14.0/dist/localization/messages_zh.js"></script>
+	
+	
+	<!-- bootstrap --> 
+	<link rel="stylesheet" href="/springvelocity/bootstrap/3.3.5/dist/css/bootstrap.css">
+	<script src="/springvelocity/bootstrap/3.3.5/dist/js/bootstrap.js"></script>
+	
+
+	<script>
+	$().ready(function() {
+		// validate the comment form when it is submitted
+		$("#commentForm").validate({
+			submitHandler:function(form){
+				alert($(form).serialize());
+	            alert("提交事件!");   
+            	
+
+	            form.submit();
+	        }
+		});
+	});
+	</script>
+	<style>
+	form .error { color: red; }
+	</style>
+ 
+</head>
+<body>
+<div class="container-fluid"> 
+<div class = "row">
+	<p>Default submitHandler is set to display an alert into of submitting the form</p>
+</div>
+<div>
+	<form   id="commentForm" method="get" class="form-horizontal" action="">
+		<div class="form-group">
+			<label for="cname" class="col-sm-2 control-label">Name</label> 
+			<div class="col-sm-10">
+				<input id="cname" name="cname" type="text" class="form-control" minlength="2" required>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="email"  class="col-sm-2 control-label">Email address</label> 
+			<div class="col-sm-10">
+				<input id="email" name="email" type="email"	class="form-control" placeholder="Email" required />
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="password" class="col-sm-2 control-label" >Password</label>
+			<div class="col-sm-10">
+				<input id="password" name="password" type="password" class="form-control" placeholder="Password">
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label for="curl" class="col-sm-2 control-label">number (optional)</label> 
+			<div class="col-sm-10">
+				<input id="number" name="number" type="number" class="form-control"  placeholder="number">
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="ccomment"  class="col-sm-2 control-label">Your comment (required)</label>
+			<div class="col-sm-10">
+				<textarea id="ccomment" name="ccomment" class="form-control"  placeholder="ccomment" rows="3" required></textarea>
+			</div>
+		</div>
+
+		<div class="form-group">
+			<label for="exampleInputFile" class="col-sm-2 control-label">File input</label> 
+			<div class="col-sm-10">
+				<input type="file" id="exampleInputFile" name="exampleInputFile" class="form-control">
+				<p class="help-block">Example block-level help text here.</p>
+			</div>
+		</div>
+		<div class="form-group">
+			<label for="checkbox" class="col-sm-2 control-label"> 
+			</label>
+			<div class="col-sm-10">
+				<input type="checkbox"> Check me out  
+			</div>
+		</div>
+		<div class="form-group">
+		    <div class="col-sm-offset-2 col-sm-10">
+		      <div class="checkbox">
+		        <label>
+		          <input type="checkbox"> 和一个checkbox平行
+		        </label>
+		      </div>
+		    </div>
+		</div>
+		<div class="form-group">
+		    <div class="col-sm-offset-2 col-sm-10">
+		      <button type="submit" class="btn btn-default">Submit</button>
+		    </div>
+		</div>
+	</form>
+</div>
+
+ 
+</div>
+</body>
+</html>
