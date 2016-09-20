@@ -138,14 +138,44 @@
 			enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true" >
 			<columnRenamingRule searchString="COL_" replaceString=""/>
 		</table>
-		-->
+		
 		<table schema="ecpcn" tableName="ecp_cw_role" domainObjectName="Role" enableInsert="true" enableUpdateByPrimaryKey="true" enableCountByExample="false" enableUpdateByExample="false"
 			enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true" >
 			<columnRenamingRule searchString="COL_" replaceString=""/>
 		</table>
 		
+		<table schema="ecpcn" tableName="ecp_cw_cust_company_apps" domainObjectName="Application" enableInsert="true" enableUpdateByPrimaryKey="true" enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true" >
+			<columnRenamingRule searchString="COL_" replaceString=""/>
+		</table>
+		<table schema="ecpcn" tableName="ecp_cw_resource" domainObjectName="AbstractResource" enableInsert="true" enableUpdateByPrimaryKey="true" enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true" >
+			<columnRenamingRule searchString="COL_" replaceString=""/>
+		</table>
 		
+		<table schema="ecpcn" tableName="ecp_cw_tlog" domainObjectName="TransactionLog" enableInsert="true" enableUpdateByPrimaryKey="true" enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true" >
+			<columnRenamingRule searchString="COL_" replaceString=""/>
+		</table>
 		
+		<table schema="ecpcn" tableName="ecp_cw_cust_company_ex" domainObjectName="CustomerCompanyEx" enableInsert="true" enableUpdateByPrimaryKey="true" enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true" >
+			<columnRenamingRule searchString="COL_" replaceString=""/>
+		</table>
+		
+		<table schema="ecpcn" tableName="com_weakpw" domainObjectName="WeakPw" enableInsert="true" enableUpdateByPrimaryKey="true" enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true" >
+			<columnRenamingRule searchString="COL_" replaceString=""/>
+		</table>
+		<table schema="ecpcn" tableName="ecp_cw_change_password_log" domainObjectName="ChangePasswordLog" enableInsert="true" enableUpdateByPrimaryKey="true" enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true" >
+			<columnRenamingRule searchString="COL_" replaceString=""/>
+		</table>
+		-->
+		<table schema="ecpcn" tableName="ecp_cw_cust_user_ex" domainObjectName="CustomerUserEx" enableInsert="true" enableUpdateByPrimaryKey="true" enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true" >
+			<columnRenamingRule searchString="COL_" replaceString=""/>
+		</table>
 		
 	</context>
 </generatorConfiguration>
