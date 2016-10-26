@@ -18,10 +18,9 @@
 		// validate the comment form when it is submitted
 		$("#commentForm").validate({
 			submitHandler:function(form){
+				// 对form表单进行处理话
 				alert($(form).serialize());
 	            alert("提交事件!");   
-            	
-
 	            form.submit();
 	        }
 		});
