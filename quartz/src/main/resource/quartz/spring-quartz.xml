@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:task="http://www.springframework.org/schema/task" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+            http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context-3.2.xsd
+            http://www.springframework.org/schema/tx 
+            http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
+            http://www.springframework.org/schema/aop  
+            http://www.springframework.org/schema/aop/spring-aop-3.2.xsd
+            http://www.springframework.org/schema/util 
+            http://www.springframework.org/schema/util/spring-util-3.2.xsd
+            http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.2.xsd">
+	<!--#########################定时任务配置（开始）############################### -->
+	<!-- 启动触发器的配置 -->
+	<bean name="startQuertz" lazy-init="false" autowire="no"
+		class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="dataSource" ref="dataSource"></property>
+		<property name="configLocation" value="classpath:quartz.properties" />
+		<property name="transactionManager" ref="transactionManager" />
+		<!-- This name is persisted as SCHED_NAME in db. for local testing could 
+			change to unique name to avoid collision with dev server -->
+		<property name="schedulerName" value="quartzScheduler" />
+
+		<!-- Will update database cron triggers to what is in this jobs file on 
+			each deploy. Replaces all previous trigger and job data that was in the database. 
+			YMMV -->
+		<property name="overwriteExistingJobs" value="true" />
+		<!-- reference to our 'autowiring job factory bean', defined above: -->
+		<property name="jobFactory" ref="quartzJobFactory" />
+		<property name="autoStartup" value="true" />
+		<!-- Tell the Quartz scheduler about the triggers. We have implemented 
+			the 'quartzTriggers' bean in the 'Jobs and triggers' section. No need to 
+			pass job definitions, since triggers created via Spring know their jobs. 
+			Later we'll see a case when we'll have to disable this and pass the jobs 
+			explicitly. -->
+		<property name="triggers" ref="quartzTriggers" />
+		<property name="applicationContextSchedulerContextKey" value="applicationContextKey" />
+	</bean>
+	<!-- Our 'AutowiringSpringBeanJobFactory' implemented in the previous section: -->
+	<bean id="quartzJobFactory"
+		class="com.lectek.channelcontrolplatform.quartz.job.AutowiringSpringBeanJobFactory">
+		<!-- I will not explain this setting, just use it as shown: -->
+		<property name="ignoredUnknownProperties" value="applicationContext" />
+	</bean>
+	<util:list id="quartzTriggers">
+		<bean class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+			<property name="jobDetail" ref="provinceStatistics" />
+			<!-- 每隔30秒执行一次 -->
+			<property name="cronExpression" value="0/30 * * * * ?" />
+			<!-- 如果由于前一次执行时间过长导致此任务错过了执行时间，该采取何种策略。 -->
+			<property name="misfireInstruction"
+				value="#{T(org.quartz.CronTrigger).MISFIRE_INSTRUCTION_DO_NOTHING}" /><!-- 
+				错过任务，不做任何事情 -->
+		</bean>
+	</util:list>
+	<bean id="provinceStatistics"
+		class="org.springframework.scheduling.quartz.JobDetailFactoryBean">
+		<property name="jobClass"
+			value="com.lectek.channelcontrolplatform.quartz.StatisticsJob"></property>
+		<property name="durability" value="true" />
+	</bean>
+	
+
+
+
+</beans>

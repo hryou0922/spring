@@ -169,5 +169,53 @@
 	</dependency>
 	<!-- fileupload end -->
 	
+		<!-- ======== netty begin ============= -->
+	<dependency>
+	    <groupId>io.netty</groupId>
+	    <artifactId>netty-all</artifactId>
+	    <version>4.1.6.Final</version>
+	</dependency>
+	<!-- ======== netty end ============= -->
+	<!-- ======== zookeeper end ============= -->
+	<!--  -->
+	<dependency>
+	    <groupId>org.apache.zookeeper</groupId>
+	    <artifactId>zookeeper</artifactId>
+	    <version>3.4.8</version>
+	</dependency> 
+	<dependency>
+	    <groupId>com.101tec</groupId>
+	    <artifactId>zkclient</artifactId>
+	    <version>0.9</version>
+	</dependency>
+	<!-- ======== zookeeper end ============= -->	
+	<!-- Protostuff -->
+	<dependency>
+	    <groupId>com.dyuproject.protostuff</groupId>
+	    <artifactId>protostuff-core</artifactId>
+	    <version>1.0.8</version>
+	</dependency>
+	<!-- Apache Commons Collections -->
+	<dependency>
+	    <groupId>org.apache.commons</groupId>
+	    <artifactId>commons-collections4</artifactId>
+	    <version>4.0</version>
+	</dependency>
+	 
+	<!-- Objenesis -->
+	<dependency>
+	    <groupId>org.objenesis</groupId>
+	    <artifactId>objenesis</artifactId>
+	    <version>2.1</version>
+	</dependency>
+	 
+	<!-- CGLib -->
+	<dependency>
+	    <groupId>cglib</groupId>
+	    <artifactId>cglib</artifactId>
+	    <version>3.1</version>
+	</dependency>
+ 
+ 
   </dependencies>
 </project>

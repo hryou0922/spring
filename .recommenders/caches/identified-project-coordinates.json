@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-{}
-=======
-[[{"location":"D:\\mvnrepository\\org\\springframework\\spring-context\\4.3.2.RELEASE\\spring-context-4.3.2.RELEASE.jar","type":"JAR","hints":{}},"ABSENT"],[{"location":"D:\\DEV_TOOLS\\jdk1.8.0_66","type":"JRE","hints":{"EXECUTION_ENVIRONMENT":"J2SE-1.5"}},"jre:jre:1.5.0"],[{"location":"C:\\UU\\repository\\mvn\\org\\springframework\\spring-web\\4.1.6.RELEASE\\spring-web-4.1.6.RELEASE.jar","type":"JAR","hints":{}},"ABSENT"],[{"location":"C:\\Program Files\\Java\\jdk1.8.0_60","type":"JRE","hints":{"EXECUTION_ENVIRONMENT":"J2SE-1.5"}},"jre:jre:1.5.0"],[{"location":"D:\\eclipse_study\\spring\\springmybatis","type":"PROJECT","hints":{"PROJECT_NAME":"springmybatis"}},"study.hry.spring.mybatis:springmybatis:0.0.1"]]
->>>>>>> ed58528cb66ceeaeb07a6679db5e4c5f07a66df6
+[[{"location":"D:\\mvnrepository\\io\\netty\\netty-all\\4.1.6.Final\\netty-all-4.1.6.Final.jar","type":"JAR","hints":{}},"io.netty:netty-all:4.1.6"],[{"location":"D:\\DEV_TOOLS\\jdk1.8.0_66","type":"JRE","hints":{}},"jre:jre:1.8.0"]]
