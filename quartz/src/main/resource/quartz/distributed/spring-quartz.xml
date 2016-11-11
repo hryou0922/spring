@@ -70,14 +70,13 @@
 	<tx:annotation-driven transaction-manager="transactionManager" />
 	
 
-	<!-- 引入属性文件 -->
-	<context:property-placeholder location="classpath:dbconfig.properties" />
+ 
 	<!-- 配置数据源1 -->
-	<bean name="dataSource_jwhat" class="org.apache.commons.dbcp.BasicDataSource"
+	<bean name="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
 		init-method="init" destroy-method="close">
-		<property name="url" value="${jdbc.url.jwhat}" />
-		<property name="username" value="${jdbc.username.jwhat}" />
-		<property name="password" value="${jdbc.password.jwhat}" />
+		<property name="url" value="jdbc:mysql://127.0.0.1:3306/test2" />
+		<property name="username" value="root" />
+		<property name="password" value="root" />
 		<!-- 初始化连接大小 -->
 		<property name="initialSize" value="0" />
 		<!-- 连接池最大使用连接数量 -->
