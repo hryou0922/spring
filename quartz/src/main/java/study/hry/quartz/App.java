@@ -1,4 +1,4 @@
-package study.hry.spring.simple;
+package study.hry.quartz;
 
 /**
  * Hello world!
@@ -11,4 +11,3 @@ public class App
         System.out.println( "Hello World!" );
     }
 }
- 
