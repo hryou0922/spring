@@ -8,9 +8,13 @@ public class DistributeTest {
 	
 	@Test
 	public void init() throws InterruptedException{
-		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:quartz/distributed/spring-quartz.xml");
-	
-		Thread.sleep(1000 * 20);
+		int num = 10;
+		
+		while(num-- > 0){
+			ApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:quartz/distributed/spring-quartz.xml");
+			Thread.sleep(1000 * 3);
+		}
+		Thread.sleep(1000 * 60);
 	}
 	
 }
