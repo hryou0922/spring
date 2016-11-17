@@ -48,7 +48,12 @@
 		<property name="ignoredUnknownProperties" value="applicationContext" />
 	</bean>
 	<util:list id="quartzTriggers">
-		<bean class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+		<!-- 
+			Job保证并发执行，具有以下条件：
+			1. CronTriggerFactoryBean，JobDetailFactoryBean 设置id值 
+			2. job加注解@DisallowConcurrentExecution
+			-->
+		<bean id="provinceStatisticsFactory" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
 			<property name="jobDetail" ref="provinceStatistics" />
 			<!-- 每隔30秒执行一次 -->
 			<property name="cronExpression" value="0/10 * * * * ?" />
