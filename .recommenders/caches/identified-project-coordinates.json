@@ -1,9 +1,1 @@
-<<<<<<< HEAD
-[[{"location":"D:\\DEV_TOOLS\\jdk1.8.0_66","type":"JRE","hints":{}},"jre:jre:1.8.0"],[{"location":"D:\\mvnrepository\\org\\springframework\\spring-context\\4.1.6.RELEASE\\spring-context-4.1.6.RELEASE.jar","type":"JAR","hints":{}},"ABSENT"]]
-=======
-<<<<<<< HEAD
-[[{"location":"C:\\UU\\repository\\mvn\\org\\apache\\zookeeper\\zookeeper\\3.4.8\\zookeeper-3.4.8.jar","type":"JAR","hints":{}},"org.apache.hadoop:org.apache.hadoop.zookeeper:3.4.8"]]
-=======
-[[{"location":"D:\\mvnrepository\\io\\netty\\netty-all\\4.1.6.Final\\netty-all-4.1.6.Final.jar","type":"JAR","hints":{}},"io.netty:netty-all:4.1.6"],[{"location":"D:\\DEV_TOOLS\\jdk1.8.0_66","type":"JRE","hints":{}},"jre:jre:1.8.0"]]
->>>>>>> b5011ec465307050532a773a55da243b214b3920
->>>>>>> acae413a548c292d3e9f6d0a6fe96d8ffcba0ff8
+{}
