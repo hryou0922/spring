@@ -57,6 +57,7 @@
 		<sqlMapGenerator targetPackage="im.yixin.api.dao"
 			targetProject="d:\tmp\src">
 			<property name="enableSubPackages" value="true" />
+			<property name="" value=""/>
 		</sqlMapGenerator>
 
 		<!-- 生成DAO的类文件以及配置文件 -->
@@ -86,92 +87,7 @@
 			一些模型类型MBG将生成一个单一的域类为每个表,和其他可能产生不同的类MBG取决于表的结构。 escapeWildcards：排除通配符。这意味着无论SQL通配符(' 
 			_ '和' % ')的模式和表名都应该避免在搜寻列。 这是一些驱动要求如果模式或表包含一个SQL通配符(例如,如果一个表的名字是MY_TABLE,一些驱动要求的下划线字符进行转义)。 -->
 		<!-- 要生成那些表(更改tableName和domainObjectName就可以) -->
-		<!--  		
-		<table schema="ecpcn" tableName="ecp_cw_cust_user" domainObjectName="CustomerUser" enableInsert="true" enableUpdateByPrimaryKey="true" enableCountByExample="false" enableUpdateByExample="false"
-			enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true" >
-			<columnRenamingRule searchString="COL_" replaceString=""/>
-		</table>
-		
-			
-		<table schema="ecpcn" tableName="ecp_cw_cust_company" domainObjectName="CustomerCompany" enableInsert="true" enableUpdateByPrimaryKey="true" enableCountByExample="false" enableUpdateByExample="false"
-			enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true" >
-			<columnRenamingRule searchString="COL_" replaceString=""/>
-		</table>
-		<table schema="ecpcn" tableName="ecp_cw_account" domainObjectName="UserAccount" enableInsert="true" enableUpdateByPrimaryKey="true" enableCountByExample="false" enableUpdateByExample="false"
-			enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true" >
-			<columnRenamingRule searchString="COL_" replaceString=""/>
-		</table>
-		<table schema="ecpcn" tableName="ecp_cw_company_perm" domainObjectName="CompanyPermission" enableInsert="true" enableUpdateByPrimaryKey="true" enableCountByExample="false" enableUpdateByExample="false"
-			enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true" >
-			<columnRenamingRule searchString="COL_" replaceString=""/>
-		</table>
-		
-		<table schema="ecpcn" tableName="ecp_cw_package_perm" domainObjectName="EcpPackagePermission" enableInsert="true" enableUpdateByPrimaryKey="true" enableCountByExample="false" enableUpdateByExample="false"
-			enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true" >
-			<columnRenamingRule searchString="COL_" replaceString=""/>
-		</table>
-		<table schema="ecpcn" tableName="ecp_cw_personal_perm" domainObjectName="PersonalPermission" enableInsert="true" enableUpdateByPrimaryKey="true" enableCountByExample="false" enableUpdateByExample="false"
-			enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true" >
-			<columnRenamingRule searchString="COL_" replaceString=""/>
-		</table>
-		<table schema="ecpcn" tableName="ecp_cw_public_perm" domainObjectName="PublicPermission" enableInsert="true" enableUpdateByPrimaryKey="true" enableCountByExample="false" enableUpdateByExample="false"
-			enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true" >
-			<columnRenamingRule searchString="COL_" replaceString=""/>
-		</table>
-
-		
-		<table schema="ecpcn" tableName="ecp_cw_program" domainObjectName="Program" enableInsert="true" enableUpdateByPrimaryKey="true" enableCountByExample="false" enableUpdateByExample="false"
-			enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true" >
-			<columnRenamingRule searchString="COL_" replaceString=""/>
-		</table>
-		<table schema="ecpcn" tableName="cust_company_using_zteab" domainObjectName="CompanyUsingZteab" enableInsert="true" enableUpdateByPrimaryKey="true" enableCountByExample="false" enableUpdateByExample="false"
-			enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true" >
-			<columnRenamingRule searchString="COL_" replaceString=""/>
-		</table>
-		
-		<table schema="ecpcn" tableName="ecp_cw_cust_dep" domainObjectName="CustomerDepartment" enableInsert="true" enableUpdateByPrimaryKey="true" enableCountByExample="false" enableUpdateByExample="false"
-			enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true" >
-			<columnRenamingRule searchString="COL_" replaceString=""/>
-		</table>
-		
-		<table schema="ecpcn" tableName="ecp_cw_custuser_role" domainObjectName="CustuserRole" enableInsert="true" enableUpdateByPrimaryKey="true" enableCountByExample="false" enableUpdateByExample="false"
-			enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true" >
-			<columnRenamingRule searchString="COL_" replaceString=""/>
-		</table>
-		
-		<table schema="ecpcn" tableName="ecp_cw_role" domainObjectName="Role" enableInsert="true" enableUpdateByPrimaryKey="true" enableCountByExample="false" enableUpdateByExample="false"
-			enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true" >
-			<columnRenamingRule searchString="COL_" replaceString=""/>
-		</table>
-		
-		<table schema="ecpcn" tableName="ecp_cw_cust_company_apps" domainObjectName="Application" enableInsert="true" enableUpdateByPrimaryKey="true" enableCountByExample="false" enableUpdateByExample="false"
-			enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true" >
-			<columnRenamingRule searchString="COL_" replaceString=""/>
-		</table>
-		<table schema="ecpcn" tableName="ecp_cw_resource" domainObjectName="AbstractResource" enableInsert="true" enableUpdateByPrimaryKey="true" enableCountByExample="false" enableUpdateByExample="false"
-			enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true" >
-			<columnRenamingRule searchString="COL_" replaceString=""/>
-		</table>
-		
-		<table schema="ecpcn" tableName="ecp_cw_tlog" domainObjectName="TransactionLog" enableInsert="true" enableUpdateByPrimaryKey="true" enableCountByExample="false" enableUpdateByExample="false"
-			enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true" >
-			<columnRenamingRule searchString="COL_" replaceString=""/>
-		</table>
-		
-		<table schema="ecpcn" tableName="ecp_cw_cust_company_ex" domainObjectName="CustomerCompanyEx" enableInsert="true" enableUpdateByPrimaryKey="true" enableCountByExample="false" enableUpdateByExample="false"
-			enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true" >
-			<columnRenamingRule searchString="COL_" replaceString=""/>
-		</table>
-		
-		<table schema="ecpcn" tableName="com_weakpw" domainObjectName="WeakPw" enableInsert="true" enableUpdateByPrimaryKey="true" enableCountByExample="false" enableUpdateByExample="false"
-			enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true" >
-			<columnRenamingRule searchString="COL_" replaceString=""/>
-		</table>
-		<table schema="ecpcn" tableName="ecp_cw_change_password_log" domainObjectName="ChangePasswordLog" enableInsert="true" enableUpdateByPrimaryKey="true" enableCountByExample="false" enableUpdateByExample="false"
-			enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true" >
-			<columnRenamingRule searchString="COL_" replaceString=""/>
-		</table>
-		-->
+		<!--
 		<table schema="naas" tableName="OPEN_PHONE_BIND_RELATION" domainObjectName="PhoneBindRelation" enableInsert="true" enableUpdateByPrimaryKey="true" enableCountByExample="false" enableUpdateByExample="false"
 			enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true" >
 			<property name="ignoreQualifiersAtRuntime" value="true"/>
@@ -184,6 +100,68 @@
 			<columnRenamingRule searchString="COL_" replaceString=""/>
 			
 		</table>
+		<table schema="naas" tableName="OPEN_NUMBER_POOL_TEST" domainObjectName="NumberPoolTest" enableInsert="true" enableUpdateByPrimaryKey="true" enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true" >
+			<property name="ignoreQualifiersAtRuntime" value="true"/>
+			<columnRenamingRule searchString="COL_" replaceString=""/>
+		</table>
+		-->
+		<!-- 
+		<table schema="naas" tableName="OPEN_PHONE_BIND_RELATION" domainObjectName="PhoneBindRelationModel" enableInsert="true" enableUpdateByPrimaryKey="true" enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true" >
+			<property name="ignoreQualifiersAtRuntime" value="true"/>
+			<columnRenamingRule searchString="COL_" replaceString=""/>
+			
+		</table>
+		<table schema="naas" tableName="OPEN_IMEI_PHONE_RELATION" domainObjectName="ImeiPhoneRelationModel" enableInsert="true" enableUpdateByPrimaryKey="true" enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true" >
+			<property name="ignoreQualifiersAtRuntime" value="true"/>
+			<columnRenamingRule searchString="COL_" replaceString=""/>
+			
+		</table>
+		<table schema="naas" tableName="OPEN_PHONE_BIND_RELATION_HIS" domainObjectName="PhoneBindRelationHisModel" enableInsert="true" enableUpdateByPrimaryKey="true" enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true" >
+			<property name="ignoreQualifiersAtRuntime" value="true"/>
+			<columnRenamingRule searchString="COL_" replaceString=""/>
+		</table>
+		 <table schema="naas" tableName="OPEN_PHONE_IMEI" domainObjectName="PhoneImeiModel" enableInsert="true" enableUpdateByPrimaryKey="true" enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true" >
+			<property name="ignoreQualifiersAtRuntime" value="true"/>
+			<columnRenamingRule searchString="COL_" replaceString=""/>
+		</table>
+		<table schema="naas" tableName="OPEN_PHONE_IMSI" domainObjectName="PhoneImsiModel" enableInsert="true" enableUpdateByPrimaryKey="true" enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true" >
+			<property name="ignoreQualifiersAtRuntime" value="true"/>
+			<columnRenamingRule searchString="COL_" replaceString=""/>
+		</table>
+		<table schema="naas" tableName="OPEN_PHONE_IDFA" domainObjectName="PhoneIdfaModel" enableInsert="true" enableUpdateByPrimaryKey="true" enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true" >
+			<property name="ignoreQualifiersAtRuntime" value="true"/>
+			<columnRenamingRule searchString="COL_" replaceString=""/>
+		</table>
+		<table schema="naas" tableName="OPEN_PHONE_MAC" domainObjectName="PhoneMacModel" enableInsert="true" enableUpdateByPrimaryKey="true" enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true" >
+			<property name="ignoreQualifiersAtRuntime" value="true"/>
+			<columnRenamingRule searchString="COL_" replaceString=""/>
+		</table>
+		 -->
+		 <table schema="naas" tableName="OPEN_CALL_CMD_EMA" domainObjectName="CallCmdEma" enableInsert="true" enableUpdateByPrimaryKey="true" enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true" >
+			<property name="ignoreQualifiersAtRuntime" value="true"/>
+			<columnRenamingRule searchString="COL_" replaceString=""/>
+		</table>
+		<table schema="naas" tableName="OPEN_SMS_NOTIFICATION" domainObjectName="SmsNotification" enableInsert="true" enableUpdateByPrimaryKey="true" enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true" >
+			<property name="ignoreQualifiersAtRuntime" value="true"/>
+			<columnRenamingRule searchString="COL_" replaceString=""/>
+		</table>
+		<table schema="naas" tableName="OPEN_SMS_SEND" domainObjectName="SmsSend" enableInsert="true" enableUpdateByPrimaryKey="true" enableCountByExample="false" enableUpdateByExample="false"
+			enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="true" >
+			<property name="ignoreQualifiersAtRuntime" value="true"/>
+			<columnRenamingRule searchString="COL_" replaceString=""/>
+		</table>
+		
+		 
 	</context>
 </generatorConfiguration>
 
